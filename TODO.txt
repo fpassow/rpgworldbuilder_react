@@ -66,7 +66,8 @@ DONE>Admin (any method)
   DONE>Delete campaign by id
   DONE>List users and passwords
 
--->Get it into github (react is new project?)
+DONE>Get it into github (react is new project?)
+
 -->Blog my Git process
 -->Get active w/AWS again
 -->Secure mongo install
@@ -79,3 +80,6 @@ DONE>Admin (any method)
 
 -->Colapse hints
 -->Make webpack copy def.json into server/public
+-->Work on a branch, not master.
+
+
