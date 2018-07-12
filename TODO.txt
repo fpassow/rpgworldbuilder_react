@@ -1,0 +1,81 @@
+DONE>Create account
+    DONE>Success automatically logs you in
+
+DONE>Change password
+  DONE>Double-password create account
+  DONE>Double-password change pasword
+  DONE>Clear old field-values after changing password
+
+DONE>Better error for failed login
+
+DONE>Use password fields that hide what's typed
+
+DONE>Save campaign stops editing
+
+DONE>Create new campaign when logged in
+  DONE>Created but not editing
+  DONE>Got http "Unauthorized" when saving new campaign.
+      (I don't think I currently support create-on-put on the server)
+  DONE>Update campaigns list
+
+DONE>Add a dev status component 
+DONE>Remove unsafe dump  >>TODO: PUT obj2html(...) ON GITHUB
+
+DONE>Create new campaign when not logged in
+DONE>Claim on login
+DONE>Prompt to login when you save during anon edit
+DONE>Claim on account creation 
+
+DONE>Delete campaign
+DONE>Clone campaign
+
+DONE>Print campaign (save formatted)
+
+DONE>Linkable campaigns
+  DONE>update url with camp ID
+  DONE>Get camp id to new page
+  DONE>Select the desired camp
+
+DONE>CSS for 21st (bootstrap?)
+  DONE>Add bootstrap css
+  DONE>Layout columns
+  DONE>Look nice-ish
+  
+DONE>Show instructions text in edit view
+DONE>Show hints
+
+DONE>Text area for longtext
+
+DONE>Delete array items
+  DONE>Write controller.arrayFieldDelete(name,index)
+
+DONE>Other pages to make a minimal site
+
+DONE>Logging
+  DONE>Source IPs in access log
+  -->DONE
+  -->DONE
+
+DONE>Mongo security
+  DONE>Learn
+  DONE>config to require password
+
+DONE>Admin (any method)
+  DONE>list a user's stuff
+  DONE>Delete a user and their stuff
+  DONE>Delete campaign by id
+  DONE>List users and passwords
+
+-->Get it into github (react is new project?)
+-->Blog my Git process
+-->Get active w/AWS again
+-->Secure mongo install
+-->Node run-forever
+-->Live by 21st
+
+
+
+---------------------------
+
+-->Colapse hints
+-->Make webpack copy def.json into server/public

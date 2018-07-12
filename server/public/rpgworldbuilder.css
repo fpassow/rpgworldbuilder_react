@@ -1,0 +1,221 @@
+body {
+    background: black;
+    color: #ddd;
+}
+button {
+    color: #ddd;
+    background: #333;
+    border: 1px solid #877;
+}
+select {
+    color: #ddd;
+    background: #333;
+    border: 1px solid #877;
+}
+.print-link {
+    color: #ddd;
+    background: #333;
+    border: 1px solid #877;
+}
+input, textarea{
+    background: #222;
+    color: #ec0;
+}
+textarea {
+}
+h2 {
+}
+.camps-userhead {
+    border-top: 1px solid #aaa;
+    border-left: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+    background: #222;
+}
+.campaign-arrayfield-item {
+    border: 1px solid #555;
+    color: #ec0;
+}
+.campaign-arrayfield-item-delete {
+    color:red;
+}
+.campaign-static-view-item {
+    color: #ec0;
+}
+.hintlink {
+    color: #88f;
+}
+.hintlink:hover {
+    color: white;
+}
+#controls-container {
+}
+
+#user-container {
+}
+#camplist-container {
+}
+.camps-camp {
+}
+#campaign-container {
+}
+#campaign-addto-container {
+}
+.campaign-author-credit {
+}
+
+
+input {
+}
+textarea {
+}
+#hintbox {
+    border:4px solid #bbf;
+    background:white;
+    color: black;
+}
+
+/****************************End of safely editable colors section ***************************/
+
+body {
+    font-family: sans-serif;
+}
+button {
+    font-size: 18px;
+}
+select {
+    font-size: 18px;
+}
+input, textarea{
+    padding: 5px;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+textarea {
+    font-size: 20px;
+    height: 70px;
+}
+h2 {
+    margin: 0px;
+}
+#controls-container {
+    width:230px;
+    float:left;
+    margin: 0px;
+    padding: 0px;
+}
+
+/****************** User ****************/
+#user-container {
+    padding: 10px;
+    margin: 0 10px 10px 10px;
+}
+
+
+
+/****************** Campaign List ****************/
+#camplist-container {
+    padding: 10px;
+    margin: 10px;
+}
+.camps-camp {
+    display:block;
+    width: 100%;
+}
+.camps-userhead {
+    margin-bottom: 3px;
+    padding:3px 3px 3px 10px;
+}
+
+
+/****************** Campaign ****************/
+
+#campaign-container {
+    margin-left: 260px;
+   /* margin-right:100px;*/
+    margin-top: 30px;
+    padding: 10px;
+    max-width: 800px;
+}
+
+#campaign-addto-container {
+    display:inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.campaign-author-credit {
+    text-align: right;
+}
+
+
+/************** From Campaign Editor*****/
+div.campaign-field h3 {
+	margin-bottom: 5px;
+}
+div.campaign-arrayfield h3 {
+	margin-bottom: 5px;
+}
+div.campaign-field p {
+    margin: 2px 0px 5px 0px;
+}
+div.campaign-arrayfield p {
+    margin: 2px 0px 5px 0px;
+}
+.campaign-arrayfield-item {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #555;
+    font-size:18px;
+}
+.campaign-arrayfield-item-delete {
+    text-align: right;
+    display:inline-block;
+    float:right;
+}
+.hintlink {
+}
+.hintlink:hover {
+}
+.rwb-field-docblock-hints {
+    margin-left: 20px;
+}
+input {
+    width: 100%;
+}
+textarea {
+    width: 100%;
+}
+table {
+    width: 100%;
+}
+/****************************/
+
+#hintbox {
+    border:4px solid #bbf;
+    width:50%;
+    padding: 20px;
+    z-index:10;
+    position:fixed;
+    left:100px;
+    top:100px;
+    display:none;
+}
+
+#savebox {
+    z-index:10;
+    position:fixed;
+    left:0px;
+    top:0px;
+    width:95%;
+    margin: 0px;
+    padding: 30px;
+    display:none;
+}
+#savebox-controls {
+    text-align: right;
+}
+#savebox-content {
+}
+
+

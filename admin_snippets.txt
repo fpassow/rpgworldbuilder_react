@@ -1,0 +1,27 @@
+Mongo Shell Admin Snippets
+--------------------------
+
+Always:
+
+  use rpgworldbuilder
+
+List users and passwords:
+
+  db.users.find({},{username:1,password:1,_id:0})
+
+List a user's campaigns:
+  
+  db.campaigns.find({username:'XXXX'},{campaignId:1, title:1, _id:0})
+
+Delete a user and their campaigns:
+
+  db.campaigns.remove({username:'XXXX'})
+  db.campaigns.remove({username:'XXXX'})
+
+Delete campaign by id:
+  
+  db.campaigns.remove({campaignId:'XXXX'})
+
+
+
+
