@@ -1,85 +1,41 @@
-DONE>Create account
-    DONE>Success automatically logs you in
+Deadline August 21!!! (Or go 100% for better support or whatever)
+-----------------------------------------------------------------
 
-DONE>Change password
-  DONE>Double-password create account
-  DONE>Double-password change pasword
-  DONE>Clear old field-values after changing password
+-->.gitignore to ignore node_modules
+-->Untrack node modules <<<<<<<<<<<<<<<<<<<<<<<<<
 
-DONE>Better error for failed login
+DONE>TAKE DOWN THE WORDPRESS BLOG!!!
 
-DONE>Use password fields that hide what's typed
+-->HTTPS
+-->Move to port 80/443 with nginx or https://stackoverflow.com/questions/7929563/node-js-express-app-wont-start-listening-on-port-80
+  -->Read about nginx (I think I want this, so I can do tomcat too)
 
-DONE>Save campaign stops editing
+-->Deploy from github OR SOME OTHER GOOD/RIGHT WAY
 
-DONE>Create new campaign when logged in
-  DONE>Created but not editing
-  DONE>Got http "Unauthorized" when saving new campaign.
-      (I don't think I currently support create-on-put on the server)
-  DONE>Update campaigns list
+-->Is it easy to make webpack copy def.json into server/public?
 
-DONE>Add a dev status component 
-DONE>Remove unsafe dump  >>TODO: PUT obj2html(...) ON GITHUB
+-->Back up mongo
 
-DONE>Create new campaign when not logged in
-DONE>Claim on login
-DONE>Prompt to login when you save during anon edit
-DONE>Claim on account creation 
+-->readme.md (what IS .md?)
 
-DONE>Delete campaign
-DONE>Clone campaign
-
-DONE>Print campaign (save formatted)
-
-DONE>Linkable campaigns
-  DONE>update url with camp ID
-  DONE>Get camp id to new page
-  DONE>Select the desired camp
-
-DONE>CSS for 21st (bootstrap?)
-  DONE>Add bootstrap css
-  DONE>Layout columns
-  DONE>Look nice-ish
-  
-DONE>Show instructions text in edit view
-DONE>Show hints
-
-DONE>Text area for longtext
-
-DONE>Delete array items
-  DONE>Write controller.arrayFieldDelete(name,index)
-
-DONE>Other pages to make a minimal site
-
-DONE>Logging
-  DONE>Source IPs in access log
-  -->DONE
-  -->DONE
-
-DONE>Mongo security
-  DONE>Learn
-  DONE>config to require password
-
-DONE>Admin (any method)
-  DONE>list a user's stuff
-  DONE>Delete a user and their stuff
-  DONE>Delete campaign by id
-  DONE>List users and passwords
-
-DONE>Get it into github (react is new project?)
-
--->Blog my Git process
--->Get active w/AWS again
--->Secure mongo install
--->Node run-forever
--->Live by 21st
-
-
-
----------------------------
-
+-->Delete my own account
 -->Colapse hints
--->Make webpack copy def.json into server/public
+
+-->Nicer CSS
+
+-->Link it from my homepage
+-->Confirm homepage is linked from LinkedIn
+-->Confirm homepage is linked from blog
+
+<<<THAT'S ENOUGHT>>>
+
+
+----------Not required for 21st---------------
+
 -->Work on a branch, not master.
+
+-->RPGWORLDBUILDER domain name, or domain name for my EC2.
+
+
 
 
