@@ -1,25 +1,38 @@
 Deadline August 21!!! (Or go 100% for better support or whatever)
 -----------------------------------------------------------------
 
--->.gitignore to ignore node_modules
--->Untrack node modules <<<<<<<<<<<<<<<<<<<<<<<<<
+DONE>.gitignore to ignore node_modules
+DONE>Untrack node modules (I didn't add them. :-)  )
 
 DONE>TAKE DOWN THE WORDPRESS BLOG!!!
 
--->HTTPS
--->Move to port 80/443 with nginx or https://stackoverflow.com/questions/7929563/node-js-express-app-wont-start-listening-on-port-80
-  -->Read about nginx (I think I want this, so I can do tomcat too)
+DONE>Back up mongo
+
+
+DONE>Move to port 80 with nginx or https://stackoverflow.com/questions/7929563/node-js-express-app-wont-start-listening-on-port-80
+  DONE>Read about nginx (I think I want this, so I can do tomcat too)
+  DONE>Install nginx
+  DONE>where do I put/edit the config?
+  DONE>Config for 80->8080
+  DONE>Test
+  DONE>Edit server.js to use 3000
+  DONE>Edit nginx config for 80->3000, not 8080 (will use 8080 for tomcat)
+  DONE>Test
+  DONE>wHAT'S STILL RUNNING ON 8080?
+
+
+-->readme.md (Use markdown, just because)
+  -->Who are the audiences?
+  -->What content do I already have?
 
 -->Deploy from github OR SOME OTHER GOOD/RIGHT WAY
 
--->Is it easy to make webpack copy def.json into server/public?
-
--->Back up mongo
-
--->readme.md (what IS .md?)
-
 -->Delete my own account
 -->Colapse hints
+
+-->Test in a clean directory
+
+-->HTTPS
 
 -->Nicer CSS
 
@@ -32,9 +45,14 @@ DONE>TAKE DOWN THE WORDPRESS BLOG!!!
 
 ----------Not required for 21st---------------
 
+-->Where are my node logs going???
+
 -->Work on a branch, not master.
 
--->RPGWORLDBUILDER domain name, or domain name for my EC2.
+-->Is it easy to make webpack copy def.json into server/public?
+
+-->RPGWORLDBUILDER domain name, or domain name for my EC2. 
+     (Nginx easily does multiple server/server_name blocks.)
 
 
 
