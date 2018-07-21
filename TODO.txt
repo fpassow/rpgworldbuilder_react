@@ -20,21 +20,18 @@ DONE>Move to port 80 with nginx or https://stackoverflow.com/questions/7929563/n
   DONE>Test
   DONE>wHAT'S STILL RUNNING ON 8080?
 
+DONE>readme.md (Use markdown, just because)
 
--->readme.md (Use markdown, just because)
-  -->Who are the audiences?
-  -->What content do I already have?
-
+-->Test in a clean directory
 -->Deploy from github OR SOME OTHER GOOD/RIGHT WAY
 
 -->Delete my own account
 -->Colapse hints
 
--->Test in a clean directory
-
 -->HTTPS
 
 -->Nicer CSS
+  -->v1: Just bootstrap the index page.
 
 -->Link it from my homepage
 -->Confirm homepage is linked from LinkedIn
