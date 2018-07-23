@@ -14,7 +14,7 @@
         {
             "name": "world",
             "label": "World",
-            "instructions": "Some games come with a world. Or you might use on from fiction. Or create your own with places and groups and technology and/or magic, etc.",
+            "instructions": "Some games come with a world. Or you might use one from fiction. Or create your own with all its places and groups and technology and/or magic, etc.",
             "longtext": true,
             "isarrayfield": false,
             "hints": []            
@@ -95,18 +95,19 @@
                 {"label": "Privateers", "description": "Raiders-for-profit who are not criminals in the eyes of their own people. Historical privateers, corsairs, Robin Hood, viking raders, border raiders, and PCs who kill orcs and dragons for their treasure."},
                 {"label": "Quest", "description": "A journey to achieve a goal. The advantage is a single crystal clear goal. Quests may seek a magical treasure, a cure, or a personal fortune. The Lord of the Rings trilogy is a quest to destroy the ring. Battlestar Galactica is a quest for the legendary lost colony and a new home.  "},
                 {"label": "Survival", "description": "PCs may be lost or marooned away from their own kind, trying to stay alive and find a way home. Castaways can be transported by fantastic means and can find themselves in very strange places. Examples: John Carter of Mars Lost in Space, and Farscape. A large group of castaways might turn into a colony. And exiles are deliberate castaways. Or PCs might man a lonely outpost in a dangerous land, or simply try to stay a live in a deadly, futuristic urban wasteland. PCs might be hated, hunted, or tracked by a relentless foe. Survival might also depend on meeting a special need, such as a vampire's need for blood. Survivors explore their environment, fight off attackers, and seek vital resources. They meet new friends and allies, and new enemies. "},
-                {"label": "Personal Mission", "description": "The PCs are doing something because they just really want to. They are driven to become the worlds greatest swordsman, to advance science, prove the Hollow Earth is real, or bring back Atlantis. A PC's personal mission might also be an extended hunt or mystery. Or maybe they want to escape from their backwater planet and see the start, or just get rich and retire. A PC with a personal quest and a personal fortune can employ like-minded PCs in Jobs With Missions. "},
+                {"label": "Personal Mission", "description": "The PCs are doing something because they just really want to. They are driven to become the worlds greatest swordsman, to advance science, prove the Hollow Earth is real, avenge some great wrong, or bring back Atlantis. A PC's personal mission might also be an extended hunt or mystery. Or maybe they want to escape from their backwater planet and see the stars, or just get rich and retire. A PC with a personal quest and a personal fortune can employ like-minded PCs as Agents. "},
                 {"label": "Escape", "description": "A kind of Quest. A desperate journey to Anywhere Else. Powerful, but best for short campaigns. "},
-                {"label": "Merchants", "description": "business isn't always boring. Think of the early spice traders in Earth’s Age of Exploration, the caravans along the Silk Road, or maybe the fur traders of the American frontier.  "},
-                {"label": "Keys Quest", "description": "A classic… The Great Magic Thing was divided into parts. The parts were scattered and hidden in dangerous places. And the PCs have a reason to find them. Like all quests, it has a final end. But it has a bunch of intermediate ends, too. Twelve parts automatically gives you twelve adventures. Stretch it to a few adventures per part and you can get a whole year of play. It’s over-used. But it’s over-used because it works. "},
+                {"label": "Merchants", "description": "Business isn't always boring. Just try to buy low, sell high, and get out alive. Think of the early spice traders in Earth’s Age of Exploration, the caravans along the Silk Road, or maybe the fur traders of the American frontier.  "},
+                {"label": "Keys Quest", "description": "A classic… The Great Magic Thing was divided into parts. The parts were scattered and hidden in dangerous places. And the PCs have a reason to find them. Like all quests, it has a final end. But it has a bunch of intermediate ends, too. Twelve parts automatically gives you twelve adventures. Stretch it to a few adventures per part and you can get a whole year of play. It’s over-used. But it’s over-used because it works. Also, the parts do not have to be magic. They might just be enumerated requirements to achieve some goal. And the players might never even realize that you are using this form."},
                 {"label": "Wandering Heroes", "description": "PCs have explicitly signed up to fight evil and help those in need. Examples: Knights of the Round Table, Dr. Who, The A-Team. This is a popular classic. But make sure the players explicitly agree to it, because it requires the PCs to do dangerous things without any other rational motivation."},
-                {"label": "Treasure Hunters", "description": "Treasure hunting is popular in fiction and a straightforward source of adventures. However, treasure hunters who are after the Big Score either get tired of failing, or succeed and retire. So don't count on treasure hunting alone for a long campaign. "}
+                {"label": "Treasure Hunters", "description": "Treasure hunting is popular in fiction and is a straightforward source of adventures. However, treasure hunters who are after the Big Score either get tired of failing, or succeed and retire. So don't count on treasure hunting alone for a long campaign. On the other hand, PCs who hunt for knowledge or artifacts with some motive other than money might never have to retire."},
+                {"label": "Defenders", "description": "The PCs are motivated to defend something, or defend against something. They might defend a kindom against all threats. Or they might defend their society against vampires or some other magical threat. As long as the threats attack, you have adventures."}
             ]            
         },
         {
             "name": "toy",
             "label": "Toys and Treasures",
-            "instructions": "Things the players will love getting and using. Tools, weapons, ammo, authority, reputation, spells, powers, secrets, etc.",
+            "instructions": "Things the players will love getting and using. Tools, weapons, ammo, defenses, healing, tools, authority, reputation, training, spells, powers, secrets, vehicles, mounts, familiars, etc.",
             "longtext": false,
             "isarrayfield": true,
             "hints": []            
@@ -122,64 +123,18 @@
         {
             "name": "side",
             "label": "Sides",
-            "instructions": "Groups or important individuals, or dragons or gods, etc. These can be outright foes, or anyone with interests different enough that you might have to negotiate with them.",
+            "instructions": "Groups or important individuals such as dragons, gods, governments, corporations, departments, factions, families, guilds, races, species, supernatural beings, etc. These can be outright foes, or anyone with interests different enough that you might have to negotiate with them.",
             "longtext": false,
             "isarrayfield": true,
-            "hints": [
-                {"label": "Government", "description": ""},
-                {"label": "Business", "description": ""},
-                {"label": "Corporation", "description": ""},
-                {"label": "Family", "description": ""},
-                {"label": "Race", "description": ""},
-                {"label": "Species", "description": ""},
-                {"label": "Profession", "description": ""},
-                {"label": "Religion", "description": ""},
-                {"label": "Volunteer Group", "description": ""},
-                {"label": "Political Group", "description": ""},
-                {"label": "Interest Group", "description": ""},
-                {"label": "School", "description": ""},
-                {"label": "Guild", "description": ""},
-                {"label": "Secret Society", "description": ""},
-                {"label": "Conspiracy", "description": ""},
-                {"label": "Crusaders", "description": ""},
-                {"label": "Animals", "description": ""},
-                {"label": "Robots", "description": ""},
-                {"label": "Ghosts", "description": ""},
-                {"label": "Monsters", "description": ""},
-                {"label": "Everyone with a power", "description": ""},
-                {"label": "Everyone with a need", "description": ""}
-            ]            
+            "hints": []           
         },
         {
             "name": "person",
             "label": "People",
-            "instructions": "List some NPCs which you would enjoy playing. Use the categories below for inspiration.",
+            "instructions": "List some NPCs which you would enjoy playing. They can be friends, family, enemies, allies, protectors, protected, buyers, sellers, bosses, minions, copetitors, teachers, students, etc.",
             "longtext": false,
             "isarrayfield": true,
-            "hints": [
-                {"label": "Friend", "description": ""},
-                {"label": "Family", "description": ""},
-                {"label": "Neighbor", "description": ""},
-                {"label": "Enemy", "description": ""},
-                {"label": "Danger", "description": ""},
-                {"label": "Ally", "description": ""},
-                {"label": "Protector", "description": ""},
-                {"label": "Protected", "description": ""},
-                {"label": "Buyer", "description": ""},
-                {"label": "Seller", "description": ""},
-                {"label": "Annoyance", "description": ""},
-                {"label": "Commander", "description": ""},
-                {"label": "Boss", "description": ""},
-                {"label": "Underling", "description": ""},
-                {"label": "Employee", "description": ""},
-                {"label": "Minion", "description": ""},
-                {"label": "Competitor", "description": ""},
-                {"label": "Unknown", "description": ""},
-                {"label": "Peer", "description": ""},
-                {"label": "Fan", "description": ""},
-                {"label": "Teacher", "description": ""},
-                {"label": "Student", "description": ""}
-            ]            
+            "hints": []            
         },
         {
             "name": "example_pcs",
@@ -192,23 +147,23 @@
         {
             "name": "adventure",
             "label": "Adventures",
-            "instructions": "How can you run some of these classic adventure types?",
+            "instructions": "Can you run some of these classic adventure types? Summarize a few examples.",
             "longtext": false,
             "isarrayfield": true,
             "hints": [
-                {"label": "Assault", "description": "Attack a place to achieve a goal. Often there&apos;s a planning an preparation phase, followed by sneaking and/or combat, sometimes followed by running away."},
+                {"label": "Assault", "description": "Attack a place to achieve a goal. Often there is a planning an preparation phase, followed by sneaking and/or combat, sometimes followed by running away."},
                 {"label": "Siege", "description": "Defend a place, and maybe some NPCs, a valuable location, etc. Common phases are discovering the threat,  finding and reaching the refuge, preparing defenses, and multiple waves of attacks with recovery and repair in between. PCs might be rescued by sunrise or the cavalry. Or they might weaken their foes enough to make a run for it, or even just win outright."},
                 {"label": "Recon", "description": "Go somewhere dangerous. Gather information to help plan future action. Get out alive."},
                 {"label": "Rescue", "description": "Get a person or people (or creatures) safely away from people (or creatures) who are holding them prisoner. The people you rescue might be weak or strong, helpful or difficult."},
                 {"label": "Theft", "description": "Get a thing from the other side, without necessarily having to fight them."},
-                {"label": "Escape", "description": "PCs have been captured. Most of their equipment has been taken away. And now they try to get away. Escapes can be a nice change of pace where the PCs concentrate on getting <b>out</b> of a place instead of getting <b>in</b>. Other adventures can turn into escapes if the PCs are captured. And a successful escape can double as a recon or an all out assault from within."},
+                {"label": "Escape", "description": "PCs have been captured. Most of their equipment has been taken away. And now they try to get away. Escapes can be a nice change of pace where the PCs concentrate on getting out of a place instead of getting in. Other adventures can turn into escapes if the PCs are captured. And a successful escape can double as a recon or an all-out assault from within."},
                 {"label": "Gauntlet", "description": "The PCs have to get from point A to point B, possibly while transporting something or someone. And lots of nasties will try to stop them. A gauntlet adventure usually has a linear form, and a clear goal. The pace is fast because the PCs will lose if the enemy has time to organize and concentrate its forces. The theme is overwhelming odds... just not faced all at once. :-)"},
                 {"label": "Hunt", "description": "The PCs track/stalk/chase something that (initially) hides and runs away. The hunt can be literal or metaphorical. And the tables might be turned. But the PCs are generally the pursuers. The PCs can themselves be hunted. But this is harder to run and works best when combined with other adventure types."},
                 {"label": "Monster Mystery", "description": "Bad things are happening. Investigate. Find the monster. Deal with it."},
                 {"label": "Mystery", "description": "As in mystery fiction. Sherlock Holmes, etc. PCs are detectives who investigate and solve the mystery."},
-                {"label": "Explore", "description": "Visit all the parts of a dangerous place to find out what&apos;s there. Classic dungeon crawling is Treasure Hunters and Privateers Exploring an underground setting."},
+                {"label": "Explore", "description": "Visit all the parts of a dangerous place to find out what's there. Classic dungeon crawling is Treasure Hunters and Privateers Exploring an underground setting."},
                 {"label": "Capture", "description": "A Hunt in which someone or something must be taken alive. This is often more complicated than just killing them."},
-                {"label": "Trick", "description": "And elaborate deception or &quot;con&quot;. The PCs must design, prepare, and execute all the parts of a plan. Each step is played out under that constant threat of being discovered. And the PCs might have to improvise if something unexpected happens."},
+                {"label": "Trick", "description": "And elaborate deception or con game. The PCs must design, prepare, and execute all the parts of a plan. Each step is played out under that constant threat of being discovered. And the PCs might have to improvise if something unexpected happens."},
                 {"label": "Negotiate", "description": "The PCs must identify, locate, contact, and talk to multiple parties to achieve their goal. Combat isn&apos;t the point. But threats are a common tactic. And negotiations might break down."},
                 {"label": "Compete", "description": "You can add a competitor to other kinds of adventures. Or build the adventure around competition for some otherwise straightforward goal."}
             ]            
@@ -236,23 +191,7 @@
             "longtext": true,
             "isarrayfield": true,
             "hints": []            
-        },
-                {
-            "name": "parts_i_love",
-            "label": "Parts you love",
-            "instructions": "",
-            "longtext": false,
-            "isarrayfield": true,
-            "hints": []            
-        },
-                {
-            "name": "parts_players_love",
-            "label": "Parts the players will love",
-            "instructions": "",
-            "longtext": false,
-            "isarrayfield": true,
-            "hints": []            
-        }      
+        }     
     ]
 }
     

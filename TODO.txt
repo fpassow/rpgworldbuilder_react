@@ -26,6 +26,13 @@ DONE>readme.md (Use markdown, just because)
 -->Deploy from github OR SOME OTHER GOOD/RIGHT WAY
 
 -->Delete my own account
+  DONE>Controller method to deleteThe user document
+  -->Delete all of the user's campaigns <<<<DEBUG THIS (MAYBE JUST DIDN'T HAVE CURRENT SERVER.JS LOADED????)
+  DONE>Button
+  DONE>Wire in the button
+  -->Test
+  -->Confirm user's campaigns are gone via mongo shell
+
 -->Colapse hints
 
 -->HTTPS
@@ -46,7 +53,7 @@ DONE>readme.md (Use markdown, just because)
 
 -->Work on a branch, not master.
 
--->Is it easy to make webpack copy def.json into server/public?
+-->Make webpack copy def.json into server/public?
 
 -->RPGWORLDBUILDER domain name, or domain name for my EC2. 
      (Nginx easily does multiple server/server_name blocks.)

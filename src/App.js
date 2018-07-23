@@ -19,9 +19,15 @@ const clientlib = new ClientLib();
               },
 */
 
+//"model" is the application state
+//model.campaignList is an array of campaign metadata objects
+//   for the menu.
+//model.campaign is the campaign currently being displayed [and edited].
+//Other properties represent the state of the GUI.
 let model_0 = {
   user: {username:"", password:"", isLoggedIn:false},
   campaignList: [],
+  campaign: null,
   editMode: false,
   editingField: null,
   creatingAccount: false,
@@ -104,6 +110,19 @@ function Controller(comp) {
   this.cancelChangePassword = ()=> {
     comp.setState({changingPassword:false});
   }
+
+  this.deleteUser = ()=>{
+    if (confirm('Click OK if you really want to delete your account. Otherwise, click "Cancel". Thanks.')) {
+      let n = comp.state.user.username;
+      let p = comp.state.user.password;
+      clientlib.deleteUser(n, p).then((r)=>{
+        alert('User deleted.');
+        comp.setState({user:{username: "", password: "", isLoggedIn: false}});
+      }).catch((e)=>{
+        alert('controller.deleteUser:' + e);
+      });
+    }
+  };
 
   this.checkTakeOwnership = ()=>{
     if (comp.state.anonymousEditing) {
@@ -382,6 +401,10 @@ class Login extends Component {
       	alert("Password fields don't match. Please retype new passwords.");
       }
     };
+    this.deleteUser = (e)=>{
+      e.preventDefault();
+      this.props.controller.deleteUser();
+    };
   }
   
   render() { 
@@ -440,6 +463,7 @@ class Login extends Component {
             <div className="logged-in-username">{this.props.model.user.username}</div>
             <button onClick={this.logout}>Logout</button>
             <button type="button" onClick={this.gotoChangePassword}>Change Password</button>
+            <button onClick={this.deleteUser}>Delete my account</button>
           </div>
         );
       }

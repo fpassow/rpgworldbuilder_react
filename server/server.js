@@ -44,27 +44,6 @@ function serveSomeWebs(store) {
     var morgan = require('morgan');
     app.use(morgan('common'));
 
-    /*DEBUG ***** TOTALLY UNSAFE. DEBUG ONLY. *****
-    console.log('**** REMOVE UNSAFE DEBUG CODE!!!! ********');
-    app.get('/dev/dumpdb', (req, res)=>{
-        store.readAll('users').then((users)=>{
-            let usernames = users.map((user)=>{return user.username;});
-            store.readAll('campaigns').then((campaigns)=>{
-                let s = '<html><head><title>UNSAFE</title>'
-                s += '<style>div {margin-left: 20px;}</style>';
-                s += '</head><body>';
-                s += obj2html(users);
-                s += '<hr/>';
-                s += obj2html(campaigns);
-                s += '</body></html>';
-                res.send(s);
-            }).catch((err)=>{
-                console.log(err);
-            });
-        });
-    });
-    */
-
 // 400 "Bad request" = Syntax wrong, missing parts, etc.
 // 401 "Unauthorized" = MISSING AUTH
 // 403 "Forbidden" = BAD PASSWORD OR USER NOT ALLOWED THAT RESOURCE.
@@ -154,12 +133,28 @@ function serveSomeWebs(store) {
             .then(()=>{
                 console.log('Deleted user: ' + authUser.username);
                 res.json({});
+                //store.deleteAll('campaigns', 'username', authUser.username)
+                //.then(()=>{
+                //    try {
+                //      console.log("Deleted user's campaigns.");
+                //      res.json({});
+                //  } catch (errr) {
+                //    console.log("Catch block:" + JSON.stringify(errr));
+                //  }
+                //})
+                //.catch((err)=>{
+                //    console.log("Error deleting deleted user's campaigns:"+JSON.stringify(err));
+                //    res.status(500).json(err);
+                //});
             })
-            .catch((err)=>{console.log('DB DELETE ERROR: ' + JSON.stringify(err));});
+            .catch((err)=>{
+                console.log('DB DELETE ERROR: ' + JSON.stringify(err));
+                res.status(500).json(err);
+            });
         })
         .catch((err)=>{
             console.log('MYSTERY ERR: '+JSON.stringify(err));
-            res.status(403).json({error:'Auth failed.'});
+            res.status(500).json({error:'Auth failed.'});
         });
     });
 
