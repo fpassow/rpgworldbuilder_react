@@ -30,20 +30,25 @@ function connect(dbUrl, dbName) {
 
             let db = client.db(dbName);
 
-            //Error if exists. Returns a promise.
+            //Create a document in collection recordType,
+            //  but only if a document with obj's keyField values doesn't already exist.
+            //Returns a promise that resolves to obj if successful, or false if a document
+            //  with that keyField value already exists.
+            //Promise rejects of there is a db access problem or other unexpected error.
             store.createOnly = (obj, recordType, keyField)=>{
                 let searchCrit = {};
                 searchCrit[keyField] = obj[keyField];
                 return new Promise((resolve, reject)=>{
                     db.collection(recordType).find(searchCrit).toArray().then((arr)=>{
                         if (arr.length) {
-                            reject({error:'User already exists'});
+                            resolve(false);
                         } else {
                             db.collection(recordType).insertOne(obj)
                             .then(()=>{resolve(obj);})
                             .catch((err)=>{reject(err);});
                         }
-                    });
+                    })
+                    .catch((e)=>{reject(e);})
                 });
             };
 
@@ -88,7 +93,7 @@ function connect(dbUrl, dbName) {
             store.deleteAll = (recordType, keyField, keyValue)=>{
                 let searchCrit = {};
                 searchCrit[keyField] = keyValue;
-                return db.collection(recordType).deleteMany(searchCrit).toArray();
+                return db.collection(recordType).deleteMany(searchCrit);
             };
 
             //Returns a promise. Will delete at most one record.
