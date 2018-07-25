@@ -25,13 +25,9 @@ DONE>readme.md (Use markdown, just because)
 -->Test in a clean directory
 -->Deploy from github OR SOME OTHER GOOD/RIGHT WAY
 
--->Delete my own account
+DONE>Delete my own account
   DONE>Controller method to deleteThe user document
-  -->Delete all of the user's campaigns <<<<DEBUG THIS (MAYBE JUST DIDN'T HAVE CURRENT SERVER.JS LOADED????)
-  DONE>Button
-  DONE>Wire in the button
-  -->Test
-  -->Confirm user's campaigns are gone via mongo shell
+  DONE>Delete all of the user's campaigns
 
 -->Colapse hints
 

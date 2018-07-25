@@ -118,6 +118,7 @@ function Controller(comp) {
       clientlib.deleteUser(n, p).then((r)=>{
         alert('User deleted.');
         comp.setState({user:{username: "", password: "", isLoggedIn: false}});
+        this.updateCampaignList();
       }).catch((e)=>{
         alert('controller.deleteUser:' + e);
       });

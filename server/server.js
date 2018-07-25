@@ -13,6 +13,8 @@ let mongoUrl = process.env.RPGWORLDBUILDER_DB;
  * Expects MongoDB connection string in environement variable RPGWORLDBUILDER_DB
  */
 
+//Config file with field names and other info. 
+//Used to create HTML pages from db records.
 var def = require('./public/def.json');
 
 var winston = require('winston');
@@ -50,8 +52,6 @@ function serveSomeWebs(store) {
 // 204 No content
 // 201 Created
 
-// ***ALLWAYS**** SEND A JSON RESPONSE BODY!!!!!!. (EVEN IF JUST {}.)
-
     // Create user if name isn't already used.
     app.post('/api/v01/users', (req, res)=>{
         let postedUser = req.body;
@@ -59,15 +59,17 @@ function serveSomeWebs(store) {
         if (postedUser && postedUser.username && postedUser.password) {
             let newUser = {username: postedUser.username, password:postedUser.password};
             store.createOnly(newUser, 'users', 'username')
-            .then(()=>{
-                //return 201 "Created" 
-                //  and a Location header with /api/v01/users/:username
-                res.location('/api/v01/users/' + postedUser.username);
-                res.status(201).json({});
+            .then((obj)=>{
+                if (obj) {
+                    res.location('/api/v01/users/' + postedUser.username);
+                    res.status(201).json({});
+                } else {
+                    res.status(403).json({error:'User already exists'});
+                    console.log('User already exists:' + postedUser.username);
+                }
             })
-            .catch(()=>{
-                res.status(403).json({error:'User already exists'});
-                console.log('User already exists:' + postedUser.username);
+            .catch((e)=>{
+                res.status(500).json(e);
             });
         } else {
             res.status(400).json({error:'Incomplete POST data.'});
@@ -81,22 +83,33 @@ function serveSomeWebs(store) {
         if (!postedUser || !postedUser.username || !postedUser.password) {
             res.status(400).json({error: 'POSTed incomplete user.'});
         } else {
-            authCheck(req, res, postedUser.username).then((authUser)=>{
-                if (postedUser.username === authUser.username) {
-                    store.crupdate(postedUser, 'users', 'username');
-                    res.status(200).json({});
+            authCheck(req, res, postedUser.username)
+            .then((authUser)=>{
+                if (authUser) {
+                    if (postedUser.username === authUser.username) {
+                        store.crupdate(postedUser, 'users', 'username');
+                        res.status(200).json({});
+                    } else {
+                        res.status(403).json({error:'Auth for different user.'});
+                    }
                 } else {
-                    res.status(403).json({error:'Auth for different user.'});
+                    res.status(403).json({error:'Bad username and/or password.'});
                 }
+            }).catch((e)=>{
+                res.status(500).json(e);
             });
         }
     });
 
     // Return an array of usernames
     app.get('/api/v01/users', (req, res)=>{
-        store.readAll('users').then((users)=>{
+        store.readAll('users')
+        .then((users)=>{
             let usernames = users.map((user)=>{return user.username;});
             res.json(usernames);
+        })
+        .catch((e)=>{
+            res.status(500).json(e);
         });
     });
 
@@ -107,13 +120,23 @@ function serveSomeWebs(store) {
             users.forEach((user)=>{delete user.password;})
             res.json(users);
         })
+        .catch((e)=>{
+            res.status(500).json(e);
+        });
     });
 
     // Auth required. For checking password. 
     //  Doesn't actually grant access to anything.
     app.get('/api/v01/checkauth', (req, res)=>{
         authCheck(req, res).then((authUser)=>{
-            res.status(200).json({});
+            if (authUser) {
+                res.status(200).json({});
+            } else {
+                res.status(403).json({error:'Bad username and/or password.'});
+            }
+        })
+        .catch((e)=>{
+            res.status(500).json(e);
         });
     });
 
@@ -121,40 +144,40 @@ function serveSomeWebs(store) {
     app.get('/api/v01/users/:username/campaigns',  (req, res)=>{
         //search the campaigns collection for the given username.
         store.findAll('campaigns', 'username', req.params.username)
-        .then((campaigns)=>{res.json(campaigns);});
+        .then((campaigns)=>{res.json(campaigns);})
+        .catch((e)=>{res.status(500).json(e);});
     });
 
     // Requires auth
     app.delete('/api/v01/users',  (req, res)=>{
         authCheck(req, res)
         .then((authUser)=>{
-            console.log('Deleting:' + authUser.username);
-            store.deleteOne('users', 'username', authUser.username)
-            .then(()=>{
-                console.log('Deleted user: ' + authUser.username);
-                res.json({});
-                //store.deleteAll('campaigns', 'username', authUser.username)
-                //.then(()=>{
-                //    try {
-                //      console.log("Deleted user's campaigns.");
-                //      res.json({});
-                //  } catch (errr) {
-                //    console.log("Catch block:" + JSON.stringify(errr));
-                //  }
-                //})
-                //.catch((err)=>{
-                //    console.log("Error deleting deleted user's campaigns:"+JSON.stringify(err));
-                //    res.status(500).json(err);
-                //});
-            })
-            .catch((err)=>{
-                console.log('DB DELETE ERROR: ' + JSON.stringify(err));
-                res.status(500).json(err);
-            });
+            if (authUser) {
+                console.log('Deleting:' + authUser.username);
+                store.deleteOne('users', 'username', authUser.username)
+                .then(()=>{
+                    console.log('Deleted user: ' + authUser.username);
+                    store.deleteAll('campaigns', 'username', authUser.username)
+                    .then(()=>{
+                        console.log("Deleted user's campaigns.");
+                        res.json({});
+                    })
+                    .catch((err)=>{
+                        console.log("Error deleting deleted user's campaigns:"+JSON.stringify(err));
+                        res.status(500).json(err);
+                    });
+                })
+                .catch((err)=>{
+                    console.log('DB DELETE ERROR: ' + JSON.stringify(err));
+                    res.status(500).json(err);
+                });
+            } else {
+                res.status(403).json({error:'Bad username and/or password.'});
+            }
         })
         .catch((err)=>{
-            console.log('MYSTERY ERR: '+JSON.stringify(err));
-            res.status(500).json({error:'Auth failed.'});
+            console.log('Error in auth check: '+JSON.stringify(err));
+            res.status(500).json(err);
         });
     });
 
@@ -179,30 +202,40 @@ function serveSomeWebs(store) {
     app.put('/api/v01/campaigns', (req, res)=>{
         let campaign = req.body;
         console.log('PUTting campaign: ['+campaign.title+'] ID:' + campaign.campaignId);
-        authCheck(req, res).then((authUser)=>{
-            console.log('authUser:'+JSON.stringify(authUser));
-            //check if campaign exists
-            store.findAll('campaigns', 'campaignId', campaign.campaignId)
-            .then((arr)=>{
-                console.log('db contains:'+JSON.stringify(arr));
-                if (!arr.length || arr[0].username === authUser.username) {
-                    store.crupdate(campaign, 'campaigns', 'campaignId')
-                    .then((x)=>{res.json({});})
-                    .catch((err)=>{res.status(500).json(err);});
-                } else {
-                    //Campaign exists but doesn't belong to this user
-                    res.status(403).json({error:'Campaign belongs to someone else.'});
-                }
-            })
-            .catch((err)=>{
-                console.log('Error from findAll in put-campaign:' + JSON.stringify(err));
-            });
+        authCheck(req, res)
+        .then((authUser)=>{
+            if (authUser) {
+                console.log('authUser:'+JSON.stringify(authUser));
+                //check if campaign exists
+                store.findAll('campaigns', 'campaignId', campaign.campaignId)
+                .then((arr)=>{
+                    console.log('db contains:'+JSON.stringify(arr));
+                    if (!arr.length || arr[0].username === authUser.username) {
+                        store.crupdate(campaign, 'campaigns', 'campaignId')
+                        .then((x)=>{res.json({});})
+                        .catch((err)=>{res.status(500).json(err);});
+                    } else {
+                        //Campaign exists but doesn't belong to this user
+                        res.status(403).json({error:'Campaign belongs to someone else.'});
+                    }
+                })
+                .catch((err)=>{ 
+                     //  
+                })
+            } else {
+                res.status(403).json({error:'Bad username or password.'});
+            }
+        })
+        .catch((err)=>{
+            console.log('Server error during auth check:' + JSON.stringify(err));
+            res.status(500).json(err);
         });
     });
 
     // List all campaigns.Return objects with campaignId, title, and username
     app.get('/api/v01/campaigns', (req, res)=>{
-        store.readAll('campaigns').then((campaigns)=>{
+        store.readAll('campaigns')
+        .then((campaigns)=>{
             res.json(
                 campaigns.map((camp)=>{
                     let camp2 = {};
@@ -212,45 +245,76 @@ function serveSomeWebs(store) {
                     return camp2;
                 })
             );
-        });  
+        })
+        .catch((err)=>{
+            console.log('Server error:' + JSON.stringify(err));
+            res.status(500).json(err);
+        });
     });
 
     // Get one campaign object
     app.get('/api/v01/campaigns/:camp_id', (req, res)=>{
-        store.findAll('campaigns', 'campaignId', req.params.camp_id).then((camp)=>{
+        store.findAll('campaigns', 'campaignId', req.params.camp_id)
+        .then((camp)=>{
             if (camp.length) {
                 res.json(camp[0]);
             } else {
                 res.status(404).json({error:'Campaign not found.'});
             }
         })
+        .catch((err)=>{
+            console.log('Server error:' + JSON.stringify(err));
+            res.status(500).json(err);
+        });
     });
 
     // Auth required. And you must own it.
     app.delete('/api/v01/campaigns/:camp_id', (req, res)=>{
-        store.findAll('campaigns', 'campaignId', req.params.camp_id).then((campaigns)=>{
+        store.findAll('campaigns', 'campaignId', req.params.camp_id)
+        .then((campaigns)=>{
             if (campaigns.length) {
                 let campaign = campaigns[0];
-                authCheck(req, res, campaign.username).then((authUser)=>{
-                    store.deleteOne('campaigns', 'campaignId', req.params.camp_id);
-                    res.json({});
+                authCheck(req, res, campaign.username)
+                .then((authUser)=>{
+                    if (authUser) {
+                        store.deleteOne('campaigns', 'campaignId', req.params.camp_id)
+                        .then(()=>{
+                            res.json({});
+                        })
+                        .catch((err)=>{
+                            console.log("Error while deleting campaign:" + JSON.stringify(err));
+                            res.status(500).json(error);
+                        });
+                    } else {
+                        res.status(403).json({error:'Bad username or password.'});
+                    }
                 }).catch((error)=>{
+                    console.log("Error during auth check:" + JSON.stringify(err));
                     res.status(500).json(error);
                 });
             } else {
                 res.status(404).json({error:'Campaign not found.'});
             }
+        })
+        .catch((err)=>{
+            console.log('Server error during auth check:' + JSON.stringify(err));
+            res.status(500).json(err);
         });
     });
 
     app.get('/api/v01/campaignpage/:camp_id', (req, res)=>{
-        store.findAll('campaigns', 'campaignId', req.params.camp_id).then((camp)=>{
+        store.findAll('campaigns', 'campaignId', req.params.camp_id)
+        .then((camp)=>{
             if (camp.length) {
                 res.send(makeWebPage(camp[0]));
             } else {
                 res.status(404).json({error:'Campaign not found.'});
             }
         })
+        .catch((err)=>{
+            console.log('Server error while getting campaign:' + JSON.stringify(err));
+            res.status(500).json(err);
+        });
     });
 
     function makeWebPage(camp) {
@@ -291,65 +355,36 @@ function serveSomeWebs(store) {
     console.log('Listening on port ' + port + '.');
 
     /* Utility function.
-     * Returns a promise with the user object if passed.
-     * Sends a status 401 and an error object and rejects the promise 
-     *    if credentials are bad.
-     * username is optional. If included, we check that it matches the user in the auth header.
+     * Returns a promise with the user object if the credentials are good.
+     * Returns a promise with false if the credentials are bad.
+     * The promise rejects if there's an error accessing the db.
+     *
+     * username is optional. If included, we check that it matches the user in the auth header
+     *   and return false if it doesn't.
      */
     function authCheck(req, res, username) {
         return new Promise(function(resolve, reject) {
             var authUser = basicAuth(req);//has name and pass
             if (username && (username !== authUser.name)) {
-                reject({error: 'Auth for different name.'});
+                resolve(false);
             } else {
                 if (authUser && authUser.name && authUser.pass) {
                     store.findAll('users', 'username', authUser.name).then((users)=> {
                         if (users.length && users[0].password === authUser.pass) {
                             resolve(users[0]);
                         } else {
-                            res.status(401).json({error: 'Auth failed in authCheck'});
-                            reject({error:'Auth failed with username ['+authUser.name+'] and password ['+authUser.pass+']'});
+                            resolve(false);
                         }
+                    })
+                    .catch((eee)=>{
+                        console.log("DB access error in authCheck:" + eee);
+                        reject(eee);
                     });
                 } else {
-                    res.status(401).json({error: 'Missing username/password'});
-                    reject({error:'Missing auth'});
+                    resolve(false);
                 }
             }
         });
-    }
-
-    //I think this won't be used on the server side for an API.
-    //What we return isn't displayed directly in a browser. And the client isn't
-    //   going to cross-site attack himself.
-    function escapeHtml(unsafe) {
-        if (!unsafe) {
-            return '';
-        }
-        return unsafe
-            .replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/"/g, '&quot;')
-            .replace(/'/g, '&#039;');
-    }
-//TODO: PUT THIS ON GITHUP
-    function obj2html(obj) {
-        let propNames = Object.keys(obj);
-        let propName = false;
-        let outArr = [];
-        for (let i = 0; i < propNames.length; i++) {
-            propName = propNames[i];
-            outArr.push('<div class="prop"><span class="propname">'+propName
-                +'</span><div class="value">');
-            if (typeof obj[propName] == 'object') {
-                outArr.push(obj2html(obj[propName]));
-            } else {
-                outArr.push(obj[propName].toString());
-            }
-            outArr.push('</div></div>');
-        }
-        return outArr.join('');
     }
 
 }
