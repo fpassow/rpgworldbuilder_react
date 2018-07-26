@@ -22,19 +22,33 @@ DONE>Move to port 80 with nginx or https://stackoverflow.com/questions/7929563/n
 
 DONE>readme.md (Use markdown, just because)
 
--->Test in a clean directory
--->Deploy from github OR SOME OTHER GOOD/RIGHT WAY
-
 DONE>Delete my own account
   DONE>Controller method to deleteThe user document
   DONE>Delete all of the user's campaigns
 
 -->Colapse hints
-
--->HTTPS
+  -->Make a Hint component (not a function)
+    -->First one just displays
+    -->Use it instead of the div
+    -->Add isOpen state
+    -->Closed by default
+    -->Don't show content when closed
+    -->Toggle state on click
+    -->Add plus/minus
+    -->Draw plus-minus according to state
 
 -->Nicer CSS
-  -->v1: Just bootstrap the index page.
+  -->Keep the gamer-black
+  -->Keep the bootstrap layout
+  -->MAKE ACTIVE BUTTONS CLEARER
+  -->BUTTON-IZE THE CAMPAIGNS IN THEIR LIST
+
+-->Test in a clean directory
+-->Deploy from github OR SOME OTHER GOOD/RIGHT WAY
+
+-->RPGWORLDBUILDER domain name, or domain name for my EC2. 
+     (Nginx easily does multiple server/server_name blocks.)
+
 
 -->Link it from my homepage
 -->Confirm homepage is linked from LinkedIn
@@ -45,14 +59,24 @@ DONE>Delete my own account
 
 ----------Not required for 21st---------------
 
+-->Do step 0 accessibility on github home page and linked pages
+-->Do step 0 accessibility on RPGWB index and SPA
+
+-->No-cookies notice  :-)
+
 -->Where are my node logs going???
 
 -->Work on a branch, not master.
 
 -->Make webpack copy def.json into server/public?
 
--->RPGWORLDBUILDER domain name, or domain name for my EC2. 
-     (Nginx easily does multiple server/server_name blocks.)
+-->HTTPS
+  --> 2048 bit key
+  --> Use Complete Certificate Chains (They should give me all links in chain)
+  --> TLS v1.2 and 1.1
+  --> Use Secure Cipher Suites
+  --> 301 redirect for http requests
+  -->Try hsts https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security
 
 
 
