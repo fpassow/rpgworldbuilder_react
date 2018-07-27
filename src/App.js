@@ -714,11 +714,7 @@ function ArrayEditableField(props) {
       <div className="fieldInstructions">{fieldDef.instructions}</div>
       <div className="hints">
         {fieldDef.hints.map((hint)=>{
-          return (
-          	<div className="hint">
-          	  <h4 className="hintlabel">{hint.label}</h4>
-          	  <div className="hintdescription">{hint.description}</div>
-          	</div>)
+          return <CollapsingHint label={hint.label} description={hint.description} />
         })}
       </div>
       <ul>
@@ -747,11 +743,7 @@ function ArrayEditableField(props) {
       <div className="fieldInstructions">{fieldDef.instructions}</div>
       <div className="hints">
         {fieldDef.hints.map((hint)=>{
-          return (
-          	<div className="hint">
-          	  <h4 className="hintlabel">{hint.label}</h4>
-          	  <div className="hintdescription">{hint.description}</div>
-          	</div>)
+          return <CollapsingHint label={hint.label} description={hint.description} />
         })}
       </div>
       <ul>
@@ -768,5 +760,33 @@ function ArrayEditableField(props) {
     </div>;
   }
 }
+
+//takes props: label, description
+class CollapsingHint extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {isOpen:false};
+    this.toggleOpen = (e)=>{
+      this.setState({isOpen: !this.state.isOpen});
+    };
+  }
+  render() { 
+    if (this.state.isOpen) {
+      return (
+        <div className="hint">
+          <h4 className="hintlabel" onClick={this.toggleOpen}>{this.props.label} (-)</h4>
+          <div className="hintdescription">{this.props.description}</div>
+        </div>
+       );
+     } else {
+       return (
+         <div className="hint">
+           <h4 className="hintlabel" onClick={this.toggleOpen}>{this.props.label} (+)</h4>
+         </div>
+       );
+     }
+  }
+}
+
 
 export default App;

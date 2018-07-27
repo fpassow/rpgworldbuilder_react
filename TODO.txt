@@ -26,16 +26,8 @@ DONE>Delete my own account
   DONE>Controller method to deleteThe user document
   DONE>Delete all of the user's campaigns
 
--->Colapse hints
-  -->Make a Hint component (not a function)
-    -->First one just displays
-    -->Use it instead of the div
-    -->Add isOpen state
-    -->Closed by default
-    -->Don't show content when closed
-    -->Toggle state on click
-    -->Add plus/minus
-    -->Draw plus-minus according to state
+DONE>ColLapse hints
+  DONE>Make a CollapsingHint component (not a function)
 
 -->Nicer CSS
   -->Keep the gamer-black
