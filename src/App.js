@@ -489,13 +489,13 @@ function CampaignList(props) {
 	      <h2>My Campaigns</h2>
 	      <ul>
 	        {myCamps.map((campMeta)=>{
-	          return <li onClick={()=>{controller.selectCampaign(campMeta)}} key={campMeta.campaignId}>{campMeta.title} {campMeta.username}</li>;
+	          return <li className="campaignlistitem" onClick={()=>{controller.selectCampaign(campMeta)}} key={campMeta.campaignId}>{campMeta.title} {campMeta.username}</li>;
 	        })}
 	      </ul>
 	      <h2>Other Campaigns</h2>
 	      <ul>
 	        {otherCamps.map((campMeta)=>{
-	          return <li onClick={()=>{controller.selectCampaign(campMeta)}} key={campMeta.campaignId}>{campMeta.title} {campMeta.username}</li>;
+	          return <li className="campaignlistitem" onClick={()=>{controller.selectCampaign(campMeta)}} key={campMeta.campaignId}>{campMeta.title} {campMeta.username}</li>;
 	        })}
 	      </ul>
 	    </div>
@@ -506,7 +506,7 @@ function CampaignList(props) {
 	      <h2>Campaigns</h2>
 	      <ul>
 	        {campList.map((campMeta)=>{
-	          return <li onClick={()=>{controller.selectCampaign(campMeta)}} key={campMeta.campaignId}>{campMeta.title} {campMeta.username}</li>;
+	          return <li className="campaignlistitem" onClick={()=>{controller.selectCampaign(campMeta)}} key={campMeta.campaignId}>{campMeta.title} {campMeta.username}</li>;
 	        })}
 	      </ul>
 	    </div>
@@ -532,7 +532,7 @@ function Campaign(props) {
   } else {
     return <div id="campaign">
       <CampaignControls model={model} controller={controller} />
-        Select a campaign
+        <br/><br/><i>Select a campaign</i>
       </div>
   }
 }
@@ -555,6 +555,7 @@ function CampaignControls(props) {
     <button type="button" 
             disabled={!isMyCampaign(model)} 
             onClick={controller.deleteCampaign}>Delete</button>
+            &nbsp;&nbsp;
     {!!model.campaign && (<a target="_blank" href={'/api/v01/campaignpage/'+model.campaign.campaignId}>print view</a>)}
   </div>
 }
@@ -577,7 +578,7 @@ function CampaignViewer(props) {
     fieldDefs.shift();//Remove title
     return (
     <div id="campaign">
-      <h2>{model.campaign.title}</h2>
+      <h2 className="campaignviewtitle">{model.campaign.title}</h2>
       {fieldDefs.map((fieldDef)=>{
         return <StaticField key={fieldDef.name}
                    fieldDef={fieldDef} 
@@ -606,14 +607,14 @@ function SimpleStaticField(props) {
   let fieldDef = props.fieldDef;
   let fieldData = props.fieldData;
   let controller = props.controller;
-  return <div><h3>{fieldDef.label}</h3>{fieldData}</div>;
+  return <div className="staticfield"><h3>{fieldDef.label}</h3>{fieldData}</div>;
 }
 
 function ArrayStaticField(props) {
   let fieldDef = props.fieldDef;
   let fieldData = props.fieldData || [];
   let controller = props.controller;
-  return <div>
+  return <div className="staticfield">
     <h3>{fieldDef.label}</h3>
     <ul>
     {fieldData.map((arrayElement)=>{

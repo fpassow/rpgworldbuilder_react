@@ -14,15 +14,25 @@ button:disabled {
     color: #888;
     border: 1px solid #877;
 }
-select {
-    color: #ddd;
-    background: #333;
-    border: 1px solid #877;
+ul {
+  list-style-type: none;
+  padding-left: 10px;
+}
+.campaignlistitem:hover {
+  color: white;
+  font-weight: bold;
 }
 .print-link {
     color: #ddd;
     background: #333;
     border: 1px solid #877;
+}
+.campaignviewtitle {
+    text-decoration: underline;
+}
+.staticfield {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 input, textarea{
     background: #222;

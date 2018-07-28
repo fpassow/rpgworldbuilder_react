@@ -9,7 +9,7 @@ DONE>TAKE DOWN THE WORDPRESS BLOG!!!
 DONE>Back up mongo
 
 
-DONE>Move to port 80 with nginx or https://stackoverflow.com/questions/7929563/node-js-express-app-wont-start-listening-on-port-80
+DONE>Move to port 80 with nginx
   DONE>Read about nginx (I think I want this, so I can do tomcat too)
   DONE>Install nginx
   DONE>where do I put/edit the config?
@@ -29,15 +29,16 @@ DONE>Delete my own account
 DONE>ColLapse hints
   DONE>Make a CollapsingHint component (not a function)
 
--->Nicer CSS
+DONE>Nicer CSS
   DONE>Keep the gamer-black
   DONE>Smaller hint labels
   DONE>Right margin
   DONE>MAKE ACTIVE BUTTONS CLEARER
-  -->BUTTON-IZE THE CAMPAIGNS IN THEIR LIST
+  FONR>BUTTON-IZE THE CAMPAIGNS IN THEIR LIST (hover->bold)
   DONE>Indent hints
   DONE>Indent hint content more
   DONE>Nicer vertical spacing
+  DONE>Improve vertical spacing on the viewer
 
 -->Test in a clean directory
 -->Deploy from github OR SOME OTHER GOOD/RIGHT WAY
@@ -45,6 +46,15 @@ DONE>ColLapse hints
 -->RPGWORLDBUILDER domain name, or domain name for my EC2. 
      (Nginx easily does multiple server/server_name blocks.)
 
+-->HTTPS
+  --> 2048 bit key
+  --> Use Complete Certificate Chains (They should give me all links in chain)
+  --> TLS v1.2 and 1.1
+  --> Use Secure Cipher Suites
+  --> 301 redirect for http requests
+  -->Try hsts https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security
+
+-->Work on a branch, not master.
 
 -->Link it from my homepage
 -->Confirm homepage is linked from LinkedIn
@@ -62,17 +72,8 @@ DONE>ColLapse hints
 
 -->Where are my node logs going???
 
--->Work on a branch, not master.
+-->Make webpack copy def.json into server/public
 
--->Make webpack copy def.json into server/public?
-
--->HTTPS
-  --> 2048 bit key
-  --> Use Complete Certificate Chains (They should give me all links in chain)
-  --> TLS v1.2 and 1.1
-  --> Use Secure Cipher Suites
-  --> 301 redirect for http requests
-  -->Try hsts https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security
 
 
 
