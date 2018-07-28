@@ -30,10 +30,14 @@ DONE>ColLapse hints
   DONE>Make a CollapsingHint component (not a function)
 
 -->Nicer CSS
-  -->Keep the gamer-black
-  -->Keep the bootstrap layout
-  -->MAKE ACTIVE BUTTONS CLEARER
+  DONE>Keep the gamer-black
+  DONE>Smaller hint labels
+  DONE>Right margin
+  DONE>MAKE ACTIVE BUTTONS CLEARER
   -->BUTTON-IZE THE CAMPAIGNS IN THEIR LIST
+  DONE>Indent hints
+  DONE>Indent hint content more
+  DONE>Nicer vertical spacing
 
 -->Test in a clean directory
 -->Deploy from github OR SOME OTHER GOOD/RIGHT WAY

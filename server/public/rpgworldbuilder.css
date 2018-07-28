@@ -2,9 +2,16 @@ body {
     background: black;
     color: #ddd;
 }
+.app {
+    margin: 50px;
+}
 button {
-    color: #ddd;
+    color: #bbb;
     background: #333;
+    border: 1px solid #fff;
+}
+button:disabled {
+    color: #888;
     border: 1px solid #877;
 }
 select {
@@ -23,7 +30,8 @@ input, textarea{
 }
 textarea {
 }
-h2 {
+h4 {
+    font-size: 18px;
 }
 .camps-userhead {
     border-top: 1px solid #aaa;
@@ -40,6 +48,16 @@ h2 {
 }
 .campaign-static-view-item {
     color: #ec0;
+}
+.editablefield {
+    margin-top: 20px;
+}
+.hint {
+    margin-left: 10px;
+}
+.hintdescription {
+    margin-left: 10px;
+    margin-bottom: 20px;
 }
 .hintlink {
     color: #88f;

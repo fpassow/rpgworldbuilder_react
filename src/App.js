@@ -298,7 +298,7 @@ class App extends Component {
   }
   render() {
     return (
-    <div>
+    <div className="app">
       <div className="row">
         <div className="col-sm-9">
           <h1>Campaign Creator</h1>
@@ -676,7 +676,7 @@ function SimpleEditableTextareaField(props) {
     let fieldData = props.fieldData || '';
     let model = props.model;
     let controller = props.controller;
-    return <div className="simpleEditableField">
+    return <div className="simpleEditableField editablefield">
         <h3>{fieldDef.label}</h3>
         <div className="fieldInstructions">{fieldDef.instructions}</div>
         <textarea name={fieldDef.name} onChange={controller.simpleFieldChanged} rows="5" cols="50">
@@ -690,7 +690,7 @@ function SimpleEditableTextinputField(props) {
     let fieldData = props.fieldData || '';
     let model = props.model;
     let controller = props.controller;
-    return <div className="simpleEditableField">
+    return <div className="simpleEditableField editablefield">
         <h3>{fieldDef.label}</h3>
         <div className="fieldInstructions">{fieldDef.instructions}</div>
         <input type="text" name={fieldDef.name} value={fieldData}
@@ -709,7 +709,7 @@ function ArrayEditableField(props) {
   if (fieldDef.name === model.editingField) {
     let arr = fieldData.slice();
     let lastData = arr.pop();
-    return <div>
+    return <div className="editablefield">
       <h3>{fieldDef.label}</h3>
       <div className="fieldInstructions">{fieldDef.instructions}</div>
       <div className="hints">
@@ -738,7 +738,7 @@ function ArrayEditableField(props) {
     </div>
   
   } else {
-    return <div>
+    return <div className="editablefield">
       <h3>{fieldDef.label}</h3>
       <div className="fieldInstructions">{fieldDef.instructions}</div>
       <div className="hints">
@@ -774,7 +774,7 @@ class CollapsingHint extends Component {
     if (this.state.isOpen) {
       return (
         <div className="hint">
-          <h4 className="hintlabel" onClick={this.toggleOpen}>{this.props.label} (-)</h4>
+          <h4 className="hintlabel hintlink" onClick={this.toggleOpen}>{this.props.label} (-)</h4>
           <div className="hintdescription">{this.props.description}</div>
         </div>
        );
