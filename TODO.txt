@@ -34,13 +34,16 @@ DONE>Nicer CSS
   DONE>Smaller hint labels
   DONE>Right margin
   DONE>MAKE ACTIVE BUTTONS CLEARER
-  FONR>BUTTON-IZE THE CAMPAIGNS IN THEIR LIST (hover->bold)
+  DONE>BUTTON-IZE THE CAMPAIGNS IN THEIR LIST (hover->bold)
   DONE>Indent hints
   DONE>Indent hint content more
   DONE>Nicer vertical spacing
   DONE>Improve vertical spacing on the viewer
 
--->Test in a clean directory
+DONE>Test in a clean directory
+
+-->Work on a branch, not master.
+
 -->Deploy from github OR SOME OTHER GOOD/RIGHT WAY
 
 -->RPGWORLDBUILDER domain name, or domain name for my EC2. 
@@ -53,8 +56,6 @@ DONE>Nicer CSS
   --> Use Secure Cipher Suites
   --> 301 redirect for http requests
   -->Try hsts https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security
-
--->Work on a branch, not master.
 
 -->Link it from my homepage
 -->Confirm homepage is linked from LinkedIn
