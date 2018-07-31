@@ -30,7 +30,7 @@
         {
             "name": "goals",
             "label": "Goals and Problems",
-            "instructions": "List the goals and problems of people and groups in the world.",
+            "instructions": "List some goals and problems of people and groups in the world.",
             "longtext": false,
             "isarrayfield": true,
             "hints": []            
@@ -86,13 +86,13 @@
         {
             "name": "driver",
             "label": "Drivers",
-            "instructions": "These are pattens for creating playable adventures. Pick some and describe how they work in this case.",
+            "instructions": "Patterns that can lead to lots of adventures. Pick some and describe how they work for your campaign.",
             "longtext": false,
             "isarrayfield": true,
             "hints": [
                 {"label": "Agents", "description": "PCs work for someone who sends them on adventures. James Bond works for MI6. Rebels work for the Rebel Alliance. Brave knights work for their king. Indian Jones works for the archeology department at Marshall College. PCs can be an elite team. Or they might work in an obscure corner of some vast bureaucracy.  Examples: The X-Files, Men in Black, Stargate, Sanctuary, Outland, Judge Dee, Agents of Shield, Battlestar Galactica, all the Star Treks, The Avengers, Blade Runner, Mission Impossible, and Torchwood. "},
                 {"label": "Freelancers", "description": "Paid freelancers include private detectives, bodyguards, bounty hunters, assassins, hackers, mercenaries, ghost hunters, monster killers, etc. PCs can be guns for hire, swords for hire, spells for hire, cyberdecks for hire, or have fast ships, or other vehicles, for hire. The PCs are contacted by their customers, and paid to go on adventures. "},
-                {"label": "Privateers", "description": "Raiders-for-profit who are not criminals in the eyes of their own people. Historical privateers, corsairs, Robin Hood, viking raders, border raiders, and PCs who kill orcs and dragons for their treasure."},
+                {"label": "Privateers", "description": "Raiders-for-profit who are not criminals in the eyes of their own people. Examples include historical privateers, corsairs, Robin Hood, viking raders, border raiders, and people who kill orcs and dragons and take their treasure."},
                 {"label": "Quest", "description": "A journey to achieve a goal. The advantage is a single crystal clear goal. Quests may seek a magical treasure, a cure, or a personal fortune. The Lord of the Rings trilogy is a quest to destroy the ring. Battlestar Galactica is a quest for the legendary lost colony and a new home.  "},
                 {"label": "Survival", "description": "PCs may be lost or marooned away from their own kind, trying to stay alive and find a way home. Castaways can be transported by fantastic means and can find themselves in very strange places. Examples: John Carter of Mars Lost in Space, and Farscape. A large group of castaways might turn into a colony. And exiles are deliberate castaways. Or PCs might man a lonely outpost in a dangerous land, or simply try to stay a live in a deadly, futuristic urban wasteland. PCs might be hated, hunted, or tracked by a relentless foe. Survival might also depend on meeting a special need, such as a vampire's need for blood. Survivors explore their environment, fight off attackers, and seek vital resources. They meet new friends and allies, and new enemies. "},
                 {"label": "Personal Mission", "description": "The PCs are doing something because they just really want to. They are driven to become the worlds greatest swordsman, to advance science, prove the Hollow Earth is real, avenge some great wrong, or bring back Atlantis. A PC's personal mission might also be an extended hunt or mystery. Or maybe they want to escape from their backwater planet and see the stars, or just get rich and retire. A PC with a personal quest and a personal fortune can employ like-minded PCs as Agents. "},

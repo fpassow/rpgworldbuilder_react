@@ -30,7 +30,7 @@
         {
             "name": "goals",
             "label": "Goals and Problems",
-            "instructions": "List the goals and problems of people and groups in the world.",
+            "instructions": "List some goals and problems of people and groups in the world.",
             "longtext": false,
             "isarrayfield": true,
             "hints": []            
