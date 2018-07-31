@@ -45,6 +45,11 @@ DONE>Test in a clean directory
 -->Work on a branch, not master.
   DONE>Make a test branch
 
+  -->Make a feature brance tune-the-def
+  -->Store it on github
+  -->Work and update it on github
+  -->Merge it
+
 -->Deploy from github OR SOME OTHER GOOD/RIGHT WAY
 
 -->RPGWORLDBUILDER domain name, or domain name for my EC2. 
