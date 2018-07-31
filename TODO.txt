@@ -43,6 +43,7 @@ DONE>Nicer CSS
 DONE>Test in a clean directory
 
 -->Work on a branch, not master.
+  DONE>Make a test branch
 
 -->Deploy from github OR SOME OTHER GOOD/RIGHT WAY
 
