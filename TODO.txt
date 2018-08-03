@@ -42,6 +42,8 @@ DONE>Nicer CSS
 
 DONE>Test in a clean directory
 
+DONE>Get a better Github avatar image (Anything is better...)
+
 -->Work on a branch, not master.
   DONE>Make a test branch
 
@@ -49,6 +51,8 @@ DONE>Test in a clean directory
   -->Store it on github
   -->Work and update it on github
   -->Merge it
+
+-->Blog "Git is Weird and uses Magic" with non-obvious mental model stuff
 
 -->Deploy from github OR SOME OTHER GOOD/RIGHT WAY
 
@@ -66,6 +70,7 @@ DONE>Test in a clean directory
 -->Link it from my homepage
 -->Confirm homepage is linked from LinkedIn
 -->Confirm homepage is linked from blog
+-->Update my github profile
 
 <<<THAT'S ENOUGHT>>>
 
