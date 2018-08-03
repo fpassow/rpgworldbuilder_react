@@ -14,7 +14,7 @@
         {
             "name": "world",
             "label": "World",
-            "instructions": "Some games come with a world. Or you might use one from fiction. Or create your own with all its places and groups and technology and/or magic, etc.",
+            "instructions": "Spend some time daydreaming about things you might include. Then write about some scenes, places, events, characters, or other stuff you would love to have in the campaign.",
             "longtext": true,
             "isarrayfield": false,
             "hints": []            
