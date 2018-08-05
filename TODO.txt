@@ -44,17 +44,17 @@ DONE>Test in a clean directory
 
 DONE>Get a better Github avatar image (Anything is better...)
 
--->Work on a branch, not master.
+DONE>Work on a branch, not master.
   DONE>Make a test branch
+  DONE>Make a feature branch tune-the-def
+  DONE>Store it on github
+  DONE>Work and update it on github
+  DONE>Merge it
 
-  -->Make a feature brance tune-the-def
-  -->Store it on github
-  -->Work and update it on github
-  -->Merge it
+DONE>Blog "Git is Weird and uses Magic" with non-obvious mental model stuff
 
--->Blog "Git is Weird and uses Magic" with non-obvious mental model stuff
-
--->Deploy from github OR SOME OTHER GOOD/RIGHT WAY
+DONE>Deploy from github OR SOME OTHER GOOD/RIGHT WAY
+  DONE>Script doing pscp, because it totally works for the number of files I have.
 
 -->RPGWORLDBUILDER domain name, or domain name for my EC2. 
      (Nginx easily does multiple server/server_name blocks.)
