@@ -56,16 +56,14 @@ DONE>Blog "Git is Weird and uses Magic" with non-obvious mental model stuff
 DONE>Deploy from github OR SOME OTHER GOOD/RIGHT WAY
   DONE>Script doing pscp, because it totally works for the number of files I have.
 
--->RPGWORLDBUILDER domain name, or domain name for my EC2. 
+DONE>RPGWORLDBUILDER domain name, or domain name for my EC2. 
      (Nginx easily does multiple server/server_name blocks.)
 
--->HTTPS
-  --> 2048 bit key
-  --> Use Complete Certificate Chains (They should give me all links in chain)
-  --> TLS v1.2 and 1.1
-  --> Use Secure Cipher Suites
-  --> 301 redirect for http requests
-  -->Try hsts https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security
+DONE>HTTPS
+-->Write deployment steps in README.md
+-->Put Nginx boilerplates into my snippets store on Github
+-->Deploy on the Ubuntu EC2 (where I could run LetsEncrypt)
+
 
 -->Link it from my homepage
 -->Confirm homepage is linked from LinkedIn
@@ -82,11 +80,14 @@ DONE>Deploy from github OR SOME OTHER GOOD/RIGHT WAY
 
 -->No-cookies notice  :-)
 
--->Where are my node logs going???
+DONE>Where are my node logs going --> ~/.forever  :-)
 
 -->Make webpack copy def.json into server/public
 
+-->Let's Encrypt auto-renew
 
+-->How to restart everything in the right order when the EC2 reboots
+-->Point at the EC2's domain, not IP. Because the IP changes if I stop and start it.
 
 
 

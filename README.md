@@ -26,12 +26,36 @@ The main page is rpgworldbuilder.html.
 
 index.html is introductory text for the user.
 
-To set up and run:
-1. npm install
-2. npm run build
-3. Start you mongodb server
-4. Create a database, mine is called rpgworldbuilder
-5. Store a database url in an environment variable called RPGWORLDBUILDER_DB.
-6. In the server directory execute: node server.js
-7. Point a browser at port 3000
-8. The port can be changed in server/server.js
+Dev Setup:
+1. Install mongodb
+2. Create "rpgworldbuilder" database
+3. npm install
+4. npm run build
+5. Start you mongodb server
+6. Create a database, mine is called rpgworldbuilder
+7. Store a database url in an environment variable called RPGWORLDBUILDER_DB.
+8. In the server directory execute: node server.js
+9. Point a browser at port 3000
+10. The port can be changed in server/server.js
+
+Production: HTTPS with Nginx on an Ubuntu 16 AWS EC2
+1. Open port 80 and 433 on EC2
+2. Point your domain name at the EC2
+3. Install mongodb
+4.  sudo service mongod start
+5. Create "rpgworldbuilder" database
+6. Create a user with access to the rpgworldbuilder database
+6. Store a database url in an environment variable called RPGWORLDBUILDER_DB
+7. Install node 6.x (+?)
+8. If "node" doesn't exist:  sudo ln -s /usr/bin/nodejs /usr/bin/node
+9. Install Nginx
+10. Configure Nginx to server from /data/www (or any other dir)
+11. Put a temporary index.html in /data/www (or wherever)
+12. Confirm http access
+13. Follow instructions at https://letsencrypt.org/ for Nginx and Ubuntu 16
+14. Confirm https access
+15. Upload project files to server .../rpgworldbuilder?
+16. npm install
+17. npm install forever
+18. From ../server, sudo forever start server.js  (sudo forever stop server.js)
+19. Reconfigure Nginx to point https to port 3000 and test
