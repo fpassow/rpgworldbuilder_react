@@ -44,18 +44,27 @@ Production: HTTPS with Nginx on an Ubuntu 16 AWS EC2
 3. Install mongodb
 4.  sudo service mongod start
 5. Create "rpgworldbuilder" database
-6. Create a user with access to the rpgworldbuilder database
+6. Create a user "rpgworldbuilder" with access to the rpgworldbuilder database
+     mongo
+     use rpgworldbuilder;
+     db.createUser({user:"rpgworldbuilder", pwd:"*****", roles:["readWrite"]}); 
 6. Store a database url in an environment variable called RPGWORLDBUILDER_DB
+       mongodb://rpgworldbuilder:********@127.0.0.1:27017/rpgworldbuilder
 7. Install node 6.x (+?)
 8. If "node" doesn't exist:  sudo ln -s /usr/bin/nodejs /usr/bin/node
 9. Install Nginx
-10. Configure Nginx to server from /data/www (or any other dir)
-11. Put a temporary index.html in /data/www (or wherever)
+10. Configure Nginx to serve from /data/www (or any other dir)
+11. Put a temporary index.html in /data/www (or the other dir)
 12. Confirm http access
 13. Follow instructions at https://letsencrypt.org/ for Nginx and Ubuntu 16
 14. Confirm https access
 15. Upload project files to server .../rpgworldbuilder?
 16. npm install
 17. npm install forever
-18. From ../server, sudo forever start server.js  (sudo forever stop server.js)
-19. Reconfigure Nginx to point https to port 3000 and test
+18. From ../server, 
+      forever start server.js  (Stop with: forever stop server.js)
+19.   curl http://localhost:3000 to check if the node part is running
+20. Reconfigure Nginx to point https to port 3000 and test
+        location / {
+             proxy_pass http://127.0.0.1:3000;
+        }
