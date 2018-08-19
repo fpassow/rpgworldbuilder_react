@@ -1,17 +1,63 @@
+
 <!DOCTYPE html>
 <html>
 <head>
         <meta charset="utf-8">
-        <title>Fritz Passow -- Webapps</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Fritz Passow</title>
         <link rel="stylesheet" href="bootstrap.min.css">
 </head>
-<body>
-<div id="content">
+<body><div class="container">
 
-<h1>Webapps on This Server</h1>
-<h2><a href="rpgwbindex.html"> RPG World Builder</a></h2>
+<h1>Fritz Passow's Home Page</h1>
+
+<p>Hello. I am currently learning front end programming with JavaScript and React. </p>
+
+<h2>Web Applications</h2>
+
+<h3><a href="rpgwbindex.html"> RPG World Builder</a></h3>
 <p>This is a tool to help design fun, playable campaign ideas for paper-pencil-and-dice roleplaying games.</p>
+<p>It's central feature is a form which is created dynamically from a JSON file (src/def.json). Users can create accounts, create campaigns, see everyone's campaigns, and clone their own copies of other campaigns.</p>
 
-</div><!--content -->
-</body>
+<p>It is a Node+Express application using React for Rendering and MongoDB for its database.</p>
+
+<p>It actually started out in PHP because PHP was used at work. I changed it to a single page web app using
+	jQuery because the reloads felt clunky. At first, it was a set of separate components for Login, the
+	Campaigns List, and the Campaign display+editing area for a single campaign. All the components 
+	supported callbacks to announce intersting state changes and they all tried to update how they displayed
+	themselves to match the new state of another component. This hurt. I thought it would be a lot simpler
+	if there was just one central Big Ball of State, and all the parts were just told to redraw themselves
+	when it changed. This iteration fed events into a controller which modified the Big Ball of State and
+	talked to the REST services. Once the new state was known, the controller called &quot;view functions&quot; to Redraw Everything. And it was all simple enough that performance was suprisingly OK. But now I've redone it with React. But I think I learned a lot by recreating historical stages
+	that lead up to React.
+</p>
+<p>It's on GitHub <a href="https://github.com/fpassow/rpgworldbuilder_react">here</a>. And previous incarnations have their own repos.</p>
+
+<h2>This Site</h2>
+<p>This site is hosted on an Amazon EC2 running Ubuntu 16, using 
+  <a href="https://nginx.org/en/docs/">Nginx</a> and free certifiate from 
+  <a href="https://letsencrypt.org/">LetsEncrypt</a>.</p>
+
+<h2>Writing</h2>
+<h3><a href="https://fritzpassow.blogspot.com/">My blog</a></h3>
+<p>Technical notes-to-self, useful fragments, things I've learned from other people, things I write while learning something, and anything I learn that makes me smile. May also incude
+	bits of personal, non-technical blog-ness.
+</p>
+
+<h3><a href="https://fpassow.github.io/bootstrap4engineers.html">Boootstrap for Engineers</a></h3>
+<p>How non-designers can easily use <a href="https://getbootstrap.com/">Bootstrap</a> to modernize the look
+	of bare HTML.
+</p>
+
+<!-- TODO
+<h2>Docs I Like</h2>
+MongoDB Node API
+MongoDB Shell
+Nginx
+-->
+
+<h2>Contact</h2>
+<a href="https://www.linkedin.com/in/fredrich-passow-4789146">Me on LinkedIn</a>
+
+</div></body>
 </html>

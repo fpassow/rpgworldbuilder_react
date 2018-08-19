@@ -60,25 +60,52 @@ DONE>RPGWORLDBUILDER domain name, or domain name for my EC2.
      (Nginx easily does multiple server/server_name blocks.)
 
 DONE>HTTPS
--->Write deployment steps in README.md
--->Put Nginx boilerplates into my snippets store on Github
--->Deploy on the Ubuntu EC2 (where I could run LetsEncrypt)
+DONE>Write deployment steps in README.md
+DONE>Deploy on the Ubuntu EC2 (where I could run LetsEncrypt
+DONE>Link it from my homepage
+
+DONE>Redir to fritzpassow.com from github homepage
+
+DONE>Confirm github repos view is linked from LinkedIn
+DONE>Confirm fritzpassow.com is linked from LinkedIn
+
+DONE>Confirm fritzpassow.com homepage is linked from blog
+
+DONE>To LinkedIn from personal home page
+DONE>To github from php
+DONE>To blog from php
+DONE>To rpgwb from php
 
 
--->Link it from my homepage
--->Confirm homepage is linked from LinkedIn
--->Confirm homepage is linked from blog
--->Update my github profile
+DONE>Point to Bootstrap for Engineers from fritzpassow.com home page
+                 https://fpassow.github.io/bootstrap4engineers.html
+DONE>Rewrite B4E to tone it down a bit
+DONE>Link to my blog from my personal home page
+
+DONE>UPDATE "WITHOUT BOOTSTRAP" PAGE
+
+
+-->My own favicon
+
 
 <<<THAT'S ENOUGHT>>>
 
 
 ----------Not required for 21st---------------
+-->Add an "about" link from rpgworldbuilder.html back to rpgwbindex.html
+-->Bounce http to https (Otherwise Chrome poops on me.)
+-->Add more info about what's in def.json to rpgwbindex.html (What's a driver, etc)
+-->Move rpgworldbuilder to /rpgwb/ in nginx
+-->Make a "static" section on fritzpassow.com EC2/nginx
+-->Move Github site content to there
+-->Make useful home pages look good without a big image to scroll past
+-->Update linkedin interests to actual interests
+-->Play with promises
+-->Write planned blog posts
 
 -->Do step 0 accessibility on github home page and linked pages
 -->Do step 0 accessibility on RPGWB index and SPA
 
--->No-cookies notice  :-)
 
 DONE>Where are my node logs going --> ~/.forever  :-)
 
