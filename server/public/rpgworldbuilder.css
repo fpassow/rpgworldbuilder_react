@@ -2,6 +2,14 @@ body {
     background: black;
     color: #ddd;
 }
+.aboutlink {
+    margin:0px;
+    padding:0px;
+    text-align: right;
+}
+.aboutlink a {
+    color: white;
+}
 .app {
     margin: 50px;
 }

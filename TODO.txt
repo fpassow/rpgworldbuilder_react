@@ -1,113 +1,22 @@
-Deadline August 21!!! (Or go 100% for better support or whatever)
------------------------------------------------------------------
-
-DONE>.gitignore to ignore node_modules
-DONE>Untrack node modules (I didn't add them. :-)  )
-
-DONE>TAKE DOWN THE WORDPRESS BLOG!!!
-
-DONE>Back up mongo
-
-
-DONE>Move to port 80 with nginx
-  DONE>Read about nginx (I think I want this, so I can do tomcat too)
-  DONE>Install nginx
-  DONE>where do I put/edit the config?
-  DONE>Config for 80->8080
-  DONE>Test
-  DONE>Edit server.js to use 3000
-  DONE>Edit nginx config for 80->3000, not 8080 (will use 8080 for tomcat)
-  DONE>Test
-  DONE>wHAT'S STILL RUNNING ON 8080?
-
-DONE>readme.md (Use markdown, just because)
-
-DONE>Delete my own account
-  DONE>Controller method to deleteThe user document
-  DONE>Delete all of the user's campaigns
-
-DONE>ColLapse hints
-  DONE>Make a CollapsingHint component (not a function)
-
-DONE>Nicer CSS
-  DONE>Keep the gamer-black
-  DONE>Smaller hint labels
-  DONE>Right margin
-  DONE>MAKE ACTIVE BUTTONS CLEARER
-  DONE>BUTTON-IZE THE CAMPAIGNS IN THEIR LIST (hover->bold)
-  DONE>Indent hints
-  DONE>Indent hint content more
-  DONE>Nicer vertical spacing
-  DONE>Improve vertical spacing on the viewer
-
-DONE>Test in a clean directory
-
-DONE>Get a better Github avatar image (Anything is better...)
-
-DONE>Work on a branch, not master.
-  DONE>Make a test branch
-  DONE>Make a feature branch tune-the-def
-  DONE>Store it on github
-  DONE>Work and update it on github
-  DONE>Merge it
-
-DONE>Blog "Git is Weird and uses Magic" with non-obvious mental model stuff
-
-DONE>Deploy from github OR SOME OTHER GOOD/RIGHT WAY
-  DONE>Script doing pscp, because it totally works for the number of files I have.
-
-DONE>RPGWORLDBUILDER domain name, or domain name for my EC2. 
-     (Nginx easily does multiple server/server_name blocks.)
-
-DONE>HTTPS
-DONE>Write deployment steps in README.md
-DONE>Deploy on the Ubuntu EC2 (where I could run LetsEncrypt
-DONE>Link it from my homepage
-
-DONE>Redir to fritzpassow.com from github homepage
-
-DONE>Confirm github repos view is linked from LinkedIn
-DONE>Confirm fritzpassow.com is linked from LinkedIn
-
-DONE>Confirm fritzpassow.com homepage is linked from blog
-
-DONE>To LinkedIn from personal home page
-DONE>To github from php
-DONE>To blog from php
-DONE>To rpgwb from php
-
-
-DONE>Point to Bootstrap for Engineers from fritzpassow.com home page
-                 https://fpassow.github.io/bootstrap4engineers.html
-DONE>Rewrite B4E to tone it down a bit
-DONE>Link to my blog from my personal home page
-
-DONE>UPDATE "WITHOUT BOOTSTRAP" PAGE
-
-
--->My own favicon
-
-
-<<<THAT'S ENOUGHT>>>
-
-
-----------Not required for 21st---------------
--->Add an "about" link from rpgworldbuilder.html back to rpgwbindex.html
--->Bounce http to https (Otherwise Chrome poops on me.)
+September 4
+===========
+DONE>Add an "about" link from rpgworldbuilder.html back to rpgwbindex.html
 -->Add more info about what's in def.json to rpgwbindex.html (What's a driver, etc)
+-->Make useful home page look OK without a big image to scroll past (bootstrap??)
+-->Add links to good/cannonical docs to index.html
+
+
+
+September 21 OR LATER. RECOMPUTE ON THE 4TH.
+===========================================
+
+
+-->Bounce http to https (Otherwise Chrome poops on me.)
 -->Move rpgworldbuilder to /rpgwb/ in nginx
 -->Make a "static" section on fritzpassow.com EC2/nginx
 -->Move Github site content to there
--->Make useful home pages look good without a big image to scroll past
--->Update linkedin interests to actual interests
--->Play with promises
--->Write planned blog posts
-
--->Do step 0 accessibility on github home page and linked pages
--->Do step 0 accessibility on RPGWB index and SPA
 
 
-DONE>Where are my node logs going --> ~/.forever  :-)
 
 -->Make webpack copy def.json into server/public
 
