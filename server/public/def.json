@@ -14,7 +14,7 @@
         {
             "name": "world",
             "label": "World",
-            "instructions": "Spend some time daydreaming about things you might include. Then write about some scenes, places, events, characters, or other stuff you would love to have in the campaign.",
+            "instructions": "Write a bit about the world, the situation, and the part of it all that you personally love and really, really want to GM.",
             "longtext": true,
             "isarrayfield": false,
             "hints": []            
@@ -30,7 +30,7 @@
         {
             "name": "goals",
             "label": "Goals and Problems",
-            "instructions": "List some goals and problems of people and groups in the world.",
+            "instructions": "List some goals and problems of people and groups in the world. Some of them should be caused by the changes.",
             "longtext": false,
             "isarrayfield": true,
             "hints": []            
@@ -38,7 +38,7 @@
         {
             "name": "scope",
             "label": "Scope",
-            "instructions": "Where it all happens. Could be a city, a planet, a war, a subculture, etc.",
+            "instructions": "Where it all happens. Could be a city, a planet, a war, a subculture, etc. Try making it larger, or smaller, than usual.",
             "longtext": false,
             "isarrayfield": false,
             "hints": []            
@@ -46,7 +46,7 @@
         {
             "name": "pcs",
             "label": "Who are the PCs?",
-            "instructions": "Which people with goals and problems will the players play?",
+            "instructions": "Which people with goals and problems can the players play?",
             "longtext": true,
             "isarrayfield": false,
             "hints": []            
@@ -86,21 +86,20 @@
         {
             "name": "driver",
             "label": "Drivers",
-            "instructions": "Patterns that can lead to lots of adventures. Pick some and describe how they work for your campaign.",
+            "instructions": "These are patterns that can lead to lots of adventures. Pick a few and describe how they can work for your campaign.",
             "longtext": false,
             "isarrayfield": true,
             "hints": [
                 {"label": "Agents", "description": "PCs work for someone who sends them on adventures. James Bond works for MI6. Rebels work for the Rebel Alliance. Brave knights work for their king. Indian Jones works for the archeology department at Marshall College. PCs can be an elite team. Or they might work in an obscure corner of some vast bureaucracy.  Examples: The X-Files, Men in Black, Stargate, Sanctuary, Outland, Judge Dee, Agents of Shield, Battlestar Galactica, all the Star Treks, The Avengers, Blade Runner, Mission Impossible, and Torchwood. "},
-                {"label": "Freelancers", "description": "Paid freelancers include private detectives, bodyguards, bounty hunters, assassins, hackers, mercenaries, ghost hunters, monster killers, etc. PCs can be guns for hire, swords for hire, spells for hire, cyberdecks for hire, or have fast ships, or other vehicles, for hire. The PCs are contacted by their customers, and paid to go on adventures. "},
-                {"label": "Privateers", "description": "Raiders-for-profit who are not criminals in the eyes of their own people. Examples include historical privateers, corsairs, Robin Hood, viking raders, border raiders, and people who kill orcs and dragons and take their treasure."},
-                {"label": "Quest", "description": "A journey to achieve a goal. The advantage is a single crystal clear goal. Quests may seek a magical treasure, a cure, or a personal fortune. The Lord of the Rings trilogy is a quest to destroy the ring. Battlestar Galactica is a quest for the legendary lost colony and a new home.  "},
-                {"label": "Survival", "description": "PCs may be lost or marooned away from their own kind, trying to stay alive and find a way home. Castaways can be transported by fantastic means and can find themselves in very strange places. Examples: John Carter of Mars Lost in Space, and Farscape. A large group of castaways might turn into a colony. And exiles are deliberate castaways. Or PCs might man a lonely outpost in a dangerous land, or simply try to stay a live in a deadly, futuristic urban wasteland. PCs might be hated, hunted, or tracked by a relentless foe. Survival might also depend on meeting a special need, such as a vampire's need for blood. Survivors explore their environment, fight off attackers, and seek vital resources. They meet new friends and allies, and new enemies. "},
-                {"label": "Personal Mission", "description": "The PCs are doing something because they just really want to. They are driven to become the worlds greatest swordsman, to advance science, prove the Hollow Earth is real, avenge some great wrong, or bring back Atlantis. A PC's personal mission might also be an extended hunt or mystery. Or maybe they want to escape from their backwater planet and see the stars, or just get rich and retire. A PC with a personal quest and a personal fortune can employ like-minded PCs as Agents. "},
-                {"label": "Escape", "description": "A kind of Quest. A desperate journey to Anywhere Else. Powerful, but best for short campaigns. "},
-                {"label": "Merchants", "description": "Business isn't always boring. Just try to buy low, sell high, and get out alive. Think of the early spice traders in Earth’s Age of Exploration, the caravans along the Silk Road, or maybe the fur traders of the American frontier.  "},
-                {"label": "Keys Quest", "description": "A classic… The Great Magic Thing was divided into parts. The parts were scattered and hidden in dangerous places. And the PCs have a reason to find them. Like all quests, it has a final end. But it has a bunch of intermediate ends, too. Twelve parts automatically gives you twelve adventures. Stretch it to a few adventures per part and you can get a whole year of play. It’s over-used. But it’s over-used because it works. Also, the parts do not have to be magic. They might just be enumerated requirements to achieve some goal. And the players might never even realize that you are using this form."},
-                {"label": "Wandering Heroes", "description": "PCs have explicitly signed up to fight evil and help those in need. Examples: Knights of the Round Table, Dr. Who, The A-Team. This is a popular classic. But make sure the players explicitly agree to it, because it requires the PCs to do dangerous things without any other rational motivation."},
-                {"label": "Treasure Hunters", "description": "Treasure hunting is popular in fiction and is a straightforward source of adventures. However, treasure hunters who are after the Big Score either get tired of failing, or succeed and retire. So don't count on treasure hunting alone for a long campaign. On the other hand, PCs who hunt for knowledge or artifacts with some motive other than money might never have to retire."},
+                {"label": "Freelancers", "description": "Paid freelancers include private detectives, bodyguards, bounty hunters, assassins, hackers, mercenaries, ghost hunters, monster killers, etc. PCs can be guns for hire, swords for hire, spells for hire, or cyberdecks for hire. They could offer wilderness skills or psychic powers. or have a fast ship / zeplin / hovercraft / etc. for hire. The PCs are contacted by their customers and paid to go on adventures. "},
+                {"label": "Privateers", "description": "The PCs are raiders-for-profit who are not criminals in the eyes of their own people. Examples include historical privateers, corsairs, Robin Hood, viking raders, border raiders, and people who kill orcs and dragons and take their treasure. Adventures start when the PCs identify a new target."},
+                {"label": "Quest", "description": "A journey to achieve a goal. The advantage is a single crystal clear goal. Quests may seek a magical treasure, a cure, or a personal fortune. The Lord of the Rings trilogy is a quest to destroy the ring. Battlestar Galactica is a quest for the legendary lost colony and a new home. Adventures start with the next step along the path to their goal."},
+                {"label": "Survival", "description": "PCs may be lost or marooned away from their own kind, trying to stay alive and find a way home. Castaways can be transported by fantastic means and can find themselves in very strange places. Examples: John Carter of Mars Lost in Space, and Farscape. A large group of castaways might turn into a colony. And exiles are deliberate castaways. Or PCs might man a lonely outpost in a dangerous land, or simply try to stay a live in a deadly, futuristic urban wasteland. PCs might be hated, hunted, or tracked by a relentless foe. Survival might also depend on meeting a special need, such as a vampire's need for blood. Survivors explore their environment, fight off attackers, and seek vital resources. They meet new friends and allies, and new enemies. Adventures can start with a new threat to survive or a vital resource to obtain."},
+                {"label": "Personal Mission", "description": "The PCs are doing something because they just really want to. They are driven to become the worlds greatest swordsman, to advance science, prove the Hollow Earth is real, avenge some great wrong, or bring back Atlantis. A PC's personal mission might also be an extended hunt or mystery. Or maybe they want to escape from their backwater planet and see the stars, or just get rich and retire. A PC with a personal quest and a personal fortune can employ like-minded PCs as Agents. Adventures start with an opportunity to advance toward the goal."},
+                {"label": "Merchants", "description": "Buy low, sell high, and get out alive. Profit is a clear and highly adaptable motivator. Think of the early spice traders in Earth’s Age of Exploration, the caravans along the Silk Road, or prospectors, smugglers, or just traveling peddlers in a dangerous world. Adventures start with an opportunity, or a threat."},
+                {"label": "Keys Quest", "description": "A classic… The Great Magic Thing was divided into parts. The parts were scattered and hidden in dangerous places. And the PCs have a reason to find them. Like all quests, it has a final end. But it has a bunch of intermediate ends, too. This pattern is over-used. But it’s over-used because it works. Also, the parts do not have to be magic. They might just be enumerated requirements to achieve some goal. And the players might never even realize that you are using this form. Adventures start with a clue to the next key."},
+                {"label": "Wandering Heroes", "description": "PCs have explicitly signed up to fight evil and help those in need. Examples: Knights of the Round Table, Dr. Who, The A-Team. This is a popular classic. But make sure the players explicitly agree to it, because it requires the PCs to do dangerous things without any other rational motivation. Adventures start when heros are needed."},
+                {"label": "Treasure Hunters", "description": "Treasure hunting is popular in fiction and is a straightforward source of adventures. Chasing the Big Score works for a short campaign. And PCs who hunt for knowledge or artifacts something else beyond simple wealth might never have to retire. Adventures start with a clue to the next treasure."},
                 {"label": "Defenders", "description": "The PCs are motivated to defend something, or defend against something. They might defend a kindom against all threats. Or they might defend their society against vampires or some other magical threat. As long as the threats attack, you have adventures."}
             ]            
         },

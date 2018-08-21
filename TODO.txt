@@ -1,6 +1,8 @@
 September 4
 ===========
+
 DONE>Add an "about" link from rpgworldbuilder.html back to rpgwbindex.html
+
 -->Add more info about what's in def.json to rpgwbindex.html (What's a driver, etc)
 -->Make useful home page look OK without a big image to scroll past (bootstrap??)
 -->Add links to good/cannonical docs to index.html
