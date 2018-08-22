@@ -114,7 +114,7 @@
         {
             "name": "place",
             "label": "Places",
-            "instructions": "Describe some places where action happens.",
+            "instructions": "Describe some amazing places where action happens.",
             "longtext": false,
             "isarrayfield": true,
             "hints": []            
@@ -170,7 +170,7 @@
         {
             "name": "character_class",
             "label": "Character Classes",
-            "instructions": "Types of people in this world, who they are, and what they do. The rules don't have to be class based. Classes are just an awesome way to tell players about a world.",
+            "instructions": "If someone published a class-based rules system designed just for this campaign, what would the classes be? The rules you actully use don't have to be class-based. But this is an awesome excercise. I recommend writing up a full page describing each class, like you'd see in a published game.",
             "longtext": false,
             "isarrayfield": true,
             "hints": []            
@@ -178,7 +178,7 @@
         {
             "name": "pc_creation_notes",
             "label": "PC Creation Notes",
-            "instructions": "Tell the players who they are, and who they can be.",
+            "instructions": "Tell the players who they are, and who they can be. You will eventually want to write up something longer. But start with a few notes here.",
             "longtext": true,
             "isarrayfield": false,
             "hints": []            
