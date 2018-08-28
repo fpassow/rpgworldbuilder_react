@@ -3,15 +3,18 @@ September 4
 
 DONE>Add an "about" link from rpgworldbuilder.html back to rpgwbindex.html
 
--->Add more info about what's in def.json to rpgwbindex.html (What's a driver, etc)
--->Make useful home page look OK without a big image to scroll past (bootstrap??)
--->Add links to good/cannonical docs to index.html
+DONE>Add more info about what's in def.json to rpgwbindex.html (What's a driver, etc)
+DONE>Make useful home page look OK without a big image to scroll past (bootstrap??)
+DONE>Add links to good/cannonical docs to index.html
+
+-->My array items run togther in the editor
+-->Nicer display of campaign owners (just as sub-headings?)
+DONE>Change print view to display the human-friendly names
 
 
 
 September 21 OR LATER. RECOMPUTE ON THE 4TH.
 ===========================================
-
 
 -->Bounce http to https (Otherwise Chrome poops on me.)
 -->Move rpgworldbuilder to /rpgwb/ in nginx
@@ -26,6 +29,10 @@ September 21 OR LATER. RECOMPUTE ON THE 4TH.
 
 -->How to restart everything in the right order when the EC2 reboots
 -->Point at the EC2's domain, not IP. Because the IP changes if I stop and start it.
+
+==============backlog=====================
+
+-->Display user's driver entries under the individual drivers, not all at the end.
 
 
 

@@ -324,7 +324,7 @@ function serveSomeWebs(store) {
         outArr.push('<html><head><title>' + camp.title + '</title></head><body>');
         outArr.push('<h2>' + camp.title + '</h2>');
         for (let fieldDef of fieldDefs) {
-            outArr.push('<h3>' + fieldDef.name + '</h3>');
+            outArr.push('<h3>' + fieldDef.label + '</h3>');
             let fieldData = camp[fieldDef.name];
             if (Array.isArray(fieldData)) {
                 outArr.push('<ul>');
