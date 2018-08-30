@@ -607,7 +607,11 @@ function SimpleStaticField(props) {
   let fieldDef = props.fieldDef;
   let fieldData = props.fieldData;
   let controller = props.controller;
-  return <div className="staticfield"><h3>{fieldDef.label}</h3>{fieldData}</div>;
+  return (
+    <div className="staticfield"><h3>{fieldDef.label}</h3>
+      <div className="static-campaign-field-value">{fieldData}</div>
+    </div>
+  );
 }
 
 function ArrayStaticField(props) {
@@ -618,7 +622,7 @@ function ArrayStaticField(props) {
     <h3>{fieldDef.label}</h3>
     <ul>
     {fieldData.map((arrayElement)=>{
-      return <li key={arrayElement}>{arrayElement}</li>
+      return <li className="static-campaign-arrayfield-item" key={arrayElement}>{arrayElement}</li>
     })}
     </ul>
   </div>;
@@ -721,9 +725,9 @@ function ArrayEditableField(props) {
       <ul>
       {arr.map((arrayElement, index)=>{
         return (
-        	<li key={arrayElement}>
+        	<li key={arrayElement} className="campaign-arrayfield-item">
         	  {arrayElement}  
-        	  <button type="button" onClick={()=>{controller.arrayFieldDelete(fieldDef.name,index);}}>X</button>
+        	  <button type="button" className="campaign-arrayfield-item-delete" onClick={()=>{controller.arrayFieldDelete(fieldDef.name,index);}}>X</button>
         	</li>
         )
       })}
@@ -733,7 +737,7 @@ function ArrayEditableField(props) {
                value={lastData} 
                onKeyPress={controller.arrayFieldKeyPress}
                onChange={controller.arrayFieldChanged} />
-        <button type="button" name={fieldDef.name} onClick={controller.arrayFieldAdd}> + </button>
+        <button className="campaign-arrayfield-addbutton" type="button" name={fieldDef.name} onClick={controller.arrayFieldAdd}> + </button>
       </li>
       </ul>
     </div>
@@ -750,12 +754,12 @@ function ArrayEditableField(props) {
       <ul>
       {fieldData.map((arrayElement,index)=>{
         return (
-        	<li key={arrayElement}>{arrayElement}  
-        	<button onClick={()=>{controller.arrayFieldDelete(fieldDef.name,index);}}>X</button></li>
+        	<li className="campaign-arrayfield-item" key={arrayElement}>{arrayElement}  
+        	<button className="campaign-arrayfield-item-delete" onClick={()=>{controller.arrayFieldDelete(fieldDef.name,index);}}>X</button></li>
         )
       })}
       <li key="button">
-        <button type="button" name={fieldDef.name} onClick={controller.arrayFieldAdd}>+</button>
+        <button className="campaign-arrayfield-addbutton" type="button" name={fieldDef.name} onClick={controller.arrayFieldAdd}>+</button>
       </li>
       </ul>
     </div>;

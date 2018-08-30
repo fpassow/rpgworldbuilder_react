@@ -1,5 +1,5 @@
 body {
-    background: black;
+    background: #111;
     color: #ddd;
 }
 .aboutlink {
@@ -46,8 +46,6 @@ input, textarea{
     background: #222;
     color: #ec0;
 }
-textarea {
-}
 h4 {
     font-size: 18px;
 }
@@ -57,12 +55,26 @@ h4 {
     border-right: 1px solid #aaa;
     background: #222;
 }
+.static-campaign-field-value {
+    background: #333;
+    border:none;
+}
 .campaign-arrayfield-item {
-    border: 1px solid #555;
+    background: #333;
+    border:none;
     color: #ec0;
+}
+.static-campaign-arrayfield-item {
+    background: #333;
+    border:none;
+    margin-bottom: 10px;
 }
 .campaign-arrayfield-item-delete {
     color:red;
+    border-radius: 8px;
+}
+.campaign-arrayfield-addbutton {
+    border-radius: 8px;
 }
 .campaign-static-view-item {
     color: #ec0;

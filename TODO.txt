@@ -1,4 +1,4 @@
-September 4
+September 21
 ===========
 
 DONE>Add an "about" link from rpgworldbuilder.html back to rpgwbindex.html
@@ -6,15 +6,23 @@ DONE>Add an "about" link from rpgworldbuilder.html back to rpgwbindex.html
 DONE>Add more info about what's in def.json to rpgwbindex.html (What's a driver, etc)
 DONE>Make useful home page look OK without a big image to scroll past (bootstrap??)
 DONE>Add links to good/cannonical docs to index.html
-
--->My array items run togther in the editor
--->Nicer display of campaign owners (just as sub-headings?)
 DONE>Change print view to display the human-friendly names
+DONE>My array items run togther in the editor
+DONE>My array items run togther in the editor (edited array AND not)
+DONE>Array items run together in static display
+DONE>Same background thing on static fields, non-array
+DONE>Match background on rpgwb index to rpgwb
+DONE>Better icon for delete array item
+DONE>Better icon for add array item 
 
+-->Image for "Try it!" link
 
+-->Nicer display of campaign owners (just as sub-headings?)
 
-September 21 OR LATER. RECOMPUTE ON THE 4TH.
-===========================================
+-->Copy "Viking Detective" to public site
+
+-->INDEX PAGE:Convert to bootstrap(?) columns, for wide screens only
+-->lose "core docs"?... comment out?
 
 -->Bounce http to https (Otherwise Chrome poops on me.)
 -->Move rpgworldbuilder to /rpgwb/ in nginx
