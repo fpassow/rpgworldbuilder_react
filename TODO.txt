@@ -14,8 +14,7 @@ DONE>Same background thing on static fields, non-array
 DONE>Match background on rpgwb index to rpgwb
 DONE>Better icon for delete array item
 DONE>Better icon for add array item 
-
--->Image for "Try it!" link
+DONE>Image for "Try it!" link
 
 -->Nicer display of campaign owners (just as sub-headings?)
 
@@ -39,6 +38,8 @@ DONE>Better icon for add array item
 -->Point at the EC2's domain, not IP. Because the IP changes if I stop and start it.
 
 ==============backlog=====================
+
+-->Edit an array item (maybe just delete and prepop text in the "add" field?)
 
 -->Display user's driver entries under the individual drivers, not all at the end.
 
