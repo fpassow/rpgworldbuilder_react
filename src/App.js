@@ -20,10 +20,14 @@ const clientlib = new ClientLib();
 */
 
 //"model" is the application state
-//model.campaignList is an array of campaign metadata objects
-//   for the menu.
+
+//model.campaignList is an array of
+//  {username:"thename", campaigns: [campMeta, campMeta, campMeta,...]}
+
 //model.campaign is the campaign currently being displayed [and edited].
+
 //Other properties represent the state of the GUI.
+
 let model_0 = {
   user: {username:"", password:"", isLoggedIn:false},
   campaignList: [],
@@ -140,10 +144,39 @@ function Controller(comp) {
 
   this.updateCampaignList = ()=>{
     clientlib.listCampaigns({}).then((campList)=>{
-      comp.setState({campaignList: campList});
+      comp.setState({campaignList:_organizeCampaigns(campList)});
     });
   };
-  
+  //Take an array of campaigns 
+  //  and return an array of user objects of the form
+  //  {username:"name", campaigns:[campMeta, campMeta, campMeta]}
+  function _organizeCampaigns(campArr) {
+
+  console.log("CAMPARR");
+  console.log(campArr);
+
+    //Make an associative array (i.e. JavaScript object)
+    //   mapping username to user objects.
+    let users = {};
+    campArr.forEach((camp)=>{
+      if (!(camp.username in users)) {
+        users[camp.username] = {username:camp.username, campaigns:[]};
+      }
+      users[camp.username].campaigns.push(camp);
+    });
+    //Make array of user objects sorted by username
+    let usersArr= [];
+    Object.keys(users).sort().forEach((nextName)=>{
+      //Sort a user's campaingMeta's and add him to the array
+      let aUser = users[nextName];
+      aUser.campaigns.sort((a,b)=>{return a.title > b.title;});
+      usersArr.push(aUser);
+    });
+    return usersArr;
+  }
+  //function _organizeCampaignsForUser(campArr, username) {
+  //
+  //}
   this.selectCampaign = (campMeta)=>{
     clientlib.loadCampaign(campMeta.campaignId).then((camp)=>{
     	if (camp) {
@@ -284,7 +317,7 @@ function Controller(comp) {
     let mergeMe = {};
     mergeMe.campaign = campy;
     comp.setState(mergeMe);
-  }
+  };
   
 }
 
@@ -475,11 +508,7 @@ class Login extends Component {
 function CampaignList(props) {
   let model = props.model;
   let controller = props.controller;
-
   let campList = model.campaignList.slice();
-  campList.sort((a, b)=>{
-  	return ((b.username+b.title) < (a.username+a.title)) ? 1:0;
-  });
 
   if (model.user.isLoggedIn) {
   	let myCamps = campList.filter((c)=>{return c.username === model.user.username;});
@@ -500,18 +529,32 @@ function CampaignList(props) {
 	      </ul>
 	    </div>
 	  );
-	} else {
+	} else { //Not logged in
 		return (
 	    <div>
 	      <h2>Campaigns</h2>
 	      <ul>
-	        {campList.map((campMeta)=>{
-	          return <li className="campaignlistitem" onClick={()=>{controller.selectCampaign(campMeta)}} key={campMeta.campaignId}>{campMeta.title} {campMeta.username}</li>;
+	        {campList.map((campUser)=>{
+	          return <CampaignListUserComponent key={campUser.username} campUser={campUser} />;
 	        })}
 	      </ul>
 	    </div>
 	  );
 	}
+}
+
+function CampaignListUserComponent(props) {
+  let campUser = props.campUser;
+  return (
+    <div className="campUser">
+      <h3>{campUser.username}</h3>
+      <ul>
+      {campUser.campaigns.map((campMeta)=>{
+        return <li className="campaignlistitem" onClick={()=>{controller.selectCampaign(campMeta)}} key={campMeta.campaignId}>{campMeta.title}</li>;
+      })}
+      </ul>
+    </div>
+  );
 }
 
 function Campaign(props) {
