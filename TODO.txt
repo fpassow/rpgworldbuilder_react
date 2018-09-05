@@ -16,7 +16,7 @@ DONE>Better icon for delete array item
 DONE>Better icon for add array item 
 DONE>Image for "Try it!" link
 
--->Nicer display of campaign owners (just as sub-headings?)
+DONE>Nicer display of campaign owners (just as sub-headings?)
 
 -->Copy "Viking Detective" to public site
 

@@ -522,7 +522,7 @@ function CampaignList(props) {
 	  <div>
 	    <h2>Campaigns</h2>
 	    {campList.map((campUser)=>{
-	     return <CampaignListUserComponent key={campUser.username} campUser={campUser} />;
+	     return <CampaignListUserComponent key={campUser.username} campUser={campUser} controller={controller} />;
 	    })}
 	  </div>
 	);
@@ -530,6 +530,7 @@ function CampaignList(props) {
 
 function CampaignListUserComponent(props) {
   let campUser = props.campUser;
+  let controller = props.controller;
   return (
     <div className="campUser">
       <h3>{campUser.username}</h3>
