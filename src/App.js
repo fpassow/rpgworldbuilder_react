@@ -151,10 +151,6 @@ function Controller(comp) {
   //  and return an array of user objects of the form
   //  {username:"name", campaigns:[campMeta, campMeta, campMeta]}
   function _organizeCampaigns(campArr) {
-
-  console.log("CAMPARR");
-  console.log(campArr);
-
     //Make an associative array (i.e. JavaScript object)
     //   mapping username to user objects.
     let users = {};
@@ -508,39 +504,28 @@ class Login extends Component {
 function CampaignList(props) {
   let model = props.model;
   let controller = props.controller;
+  //Work with a copy of the array of {username:...,campaigns:[campMeta,...]}
   let campList = model.campaignList.slice();
 
+  //If logged in, put logged in user's object at the start of the array
   if (model.user.isLoggedIn) {
-  	let myCamps = campList.filter((c)=>{return c.username === model.user.username;});
-  	let otherCamps = campList.filter((c)=>{return c.username !== model.user.username;});
-	  return (
-	    <div>
-	      <h2>My Campaigns</h2>
-	      <ul>
-	        {myCamps.map((campMeta)=>{
-	          return <li className="campaignlistitem" onClick={()=>{controller.selectCampaign(campMeta)}} key={campMeta.campaignId}>{campMeta.title} {campMeta.username}</li>;
-	        })}
-	      </ul>
-	      <h2>Other Campaigns</h2>
-	      <ul>
-	        {otherCamps.map((campMeta)=>{
-	          return <li className="campaignlistitem" onClick={()=>{controller.selectCampaign(campMeta)}} key={campMeta.campaignId}>{campMeta.title} {campMeta.username}</li>;
-	        })}
-	      </ul>
-	    </div>
-	  );
-	} else { //Not logged in
-		return (
-	    <div>
-	      <h2>Campaigns</h2>
-	      <ul>
-	        {campList.map((campUser)=>{
-	          return <CampaignListUserComponent key={campUser.username} campUser={campUser} />;
-	        })}
-	      </ul>
-	    </div>
-	  );
-	}
+    let myCamps = {username:model.user.username, campaigns:[]};
+    for (let i = 0; i < campList.length; i++) {
+      if (campList[i].username == model.user.username) {
+        myCamps = campList[i];
+        campList.splice(i, 1);
+      }
+    }
+    campList.unshift(myCamps);
+  }
+	return (
+	  <div>
+	    <h2>Campaigns</h2>
+	    {campList.map((campUser)=>{
+	     return <CampaignListUserComponent key={campUser.username} campUser={campUser} />;
+	    })}
+	  </div>
+	);
 }
 
 function CampaignListUserComponent(props) {
@@ -557,6 +542,7 @@ function CampaignListUserComponent(props) {
   );
 }
 
+//The large campaign display/editing section on the right side of the screen
 function Campaign(props) {
   let model = props.model;
   let controller = props.controller;
