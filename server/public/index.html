@@ -10,12 +10,20 @@
 <body><div class="container">
 
 <h1>Fritz Passow's Home Page</h1>
-
-<p>Hello. I am currently learning front end programming with JavaScript and React. </p>
+<p>
+  <a href="https://www.linkedin.com/in/fredrich-passow-4789146">
+  	<img src="In-2C-28px-R.png">LinkedIn
+  </a>
+  &nbsp; &nbsp; &nbsp; &nbsp;
+  <a href="https://github.com/fpassow">
+  	<img src="GitHub-Mark-32px.png"> GitHub
+  </a>
+</p>
 
 <h2>Web Applications</h2>
 
 <h3><a href="rpgwbindex.html"> RPG World Builder</a></h3>
+<p>It's on GitHub at <a href="https://github.com/fpassow/rpgworldbuilder_react">https://github.com/fpassow/rpgworldbuilder_react</a> and live <a href="rpgwbindex.html">here</a>.</p>
 <p>This is a tool to help design fun, playable campaign ideas for tabletop roleplaying games.</p>
 <p>It's central feature is a form which is created dynamically from a JSON file (<a href="def.json">src/def.json</a>). Users can create accounts, create campaigns, see everyone's campaigns, and clone their own copies of other campaigns.</p>
 
@@ -23,15 +31,14 @@
 
 <p>It actually started out in PHP because PHP was used at work. I changed it to a single page web app using
 	jQuery because the reloads felt clunky. At first, it was a set of separate components for Login, the
-	Campaigns List, and the Campaign display+editing area for a single campaign. All the components 
-	supported callbacks to announce intersting state changes and they all tried to update how they displayed
+	Campaigns List, and the Campaign area for a single campaign. All the components 
+	supported callbacks to announce interesting state changes and they all tried to update how they displayed
 	themselves to match the new state of another component. This hurt. I thought it would be a lot simpler
-	if there was just one central Big Ball of State, and all the parts were just told to redraw themselves
-	when it changed. This iteration fed events into a controller which modified the Big Ball of State and
-	talked to the REST services. Once the new state was known, the controller called &quot;view functions&quot; to Redraw Everything. And it was all simple enough that performance was suprisingly OK. But now I've redone it with React. But I think I learned a lot by recreating historical stages
-	that lead up to React.
+	if there was just one central Big Ball of State, and when that changed all the parts were just told to redraw themselves.
+	This iteration fed events into a controller which modified the Big Ball of State and
+	talked to the REST services. Once the new state was known, the controller called &quot;view functions&quot; to Redraw Everything. And it was all simple enough that performance was suprisingly OK. But now I've redone it with React. But I think I learned a lot by recreating some historical stages
+	that lead to React.
 </p>
-<p>It's on GitHub <a href="https://github.com/fpassow/rpgworldbuilder_react">here</a>. And previous incarnations have their own repos.</p>
 
 <h2><a href="index.html">This Site</a></h2>
 <p>This site is hosted on an Amazon EC2 running Ubuntu 16, using 
@@ -49,7 +56,7 @@
 	of bare HTML.
 </p>
 
-
+<!--
 <h2>Core Docs </h2>
 <ul>
 	<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">Mozilla HTML</a></li>
@@ -64,13 +71,18 @@
     		<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
     	</ul>
     </li>
-
-    <!-- <li><a href=""></a></li> -->
 </ul>
-
+-->
 
 <h2>Contact</h2>
-<a href="https://www.linkedin.com/in/fredrich-passow-4789146">Me on LinkedIn</a>
+  <a href="https://www.linkedin.com/in/fredrich-passow-4789146">
+  	<img src="In-2C-28px-R.png">LinkedIn
+  </a>
+  &nbsp; &nbsp; &nbsp; &nbsp;
+  <a href="https://github.com/fpassow">
+  	<img src="GitHub-Mark-32px.png"> GitHub
+  </a>
 
+  <br><br>
 </div></body>
 </html>

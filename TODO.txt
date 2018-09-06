@@ -18,6 +18,8 @@ DONE>Image for "Try it!" link
 
 DONE>Nicer display of campaign owners (just as sub-headings?)
 
+-->Bigger github links
+
 -->Copy "Viking Detective" to public site
 
 -->INDEX PAGE:Convert to bootstrap(?) columns, for wide screens only
@@ -40,6 +42,7 @@ DONE>Nicer display of campaign owners (just as sub-headings?)
 ==============backlog=====================
 
 -->Edit an array item (maybe just delete and prepop text in the "add" field?)
+-->Admin
 
 -->Display user's driver entries under the individual drivers, not all at the end.
 
