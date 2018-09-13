@@ -18,12 +18,14 @@ DONE>Image for "Try it!" link
 
 DONE>Nicer display of campaign owners (just as sub-headings?)
 
--->Bigger github links
+DONE>Bigger github links
 
 -->Copy "Viking Detective" to public site
 
 -->INDEX PAGE:Convert to bootstrap(?) columns, for wide screens only
--->lose "core docs"?... comment out?
+DONE>lose "core docs"?... comment out?
+
+-->Make visual "blocks" for bootstrap cells on homepage
 
 -->Bounce http to https (Otherwise Chrome poops on me.)
 -->Move rpgworldbuilder to /rpgwb/ in nginx
