@@ -1,17 +1,38 @@
 (function() {
 
-//readmore
-//Add class "readmore-context" to an element surrounding all readmore/readless
-//   content which should be hidden and revealed together.
-//Add class "readmore" to a link tag which the user clicks to display more content, and which
-//   will hide the "readmore" link itself.
-//Add class "readmore" to every element which will be revealed when
-//    the user clicks the readmore link. This works on a span within paragraph, or on complete
-//    paragraphs, lists, etc. NOTE: ALL ELEMENTS EXCEPT SPAN ARE ASSUMED TO BE DISPLAY:BLOCK.
-//All readmore text is initially hidden.
-//Add class "readless" to a link which the user clicks to hide all the readmore content. This
-//    link is initially hidden. It is displayed and rehidden along with the rest of the readmore
-//    content.
+/* 
+Provides "read more" and "read less" functionality for a web page.
+
+To use, mark some HTML element with the class "readmore-context".
+
+Within the readmore-context element, incude tags like:
+<a href="#" class="readmore">... read more</a>
+<a href="#" class="readless"> read less</a>
+
+Then mark other elements inside the readmore-context element with the class "readmore".
+These elements will be initially hidden. They will appear when the user clicks the "readmore"
+link and be hidden again when the user clicks the "readlist" link.
+
+You can mark many kinds of elements, including span, ul, ol, div, p, table, etc.
+However, all elements except span will be revealed using display:block. So if an
+element should be display:inline, wrap it in a span and put the "readmore" class on the span.
+
+Example:
+
+<div class="readmore-Context">
+
+<p>This text is always displayed but<a href="#" class="readmore">... read more</a>
+<span class="readmore"> this text is only displayed when the user clicks the reamore
+link.</span></p>
+
+<p class="readmore">And this paragraph is only displayed after the user clicks the
+readmore link.</p>
+
+<a href="#">readless</a>
+
+</div>
+
+*/
 
 
 
@@ -20,7 +41,7 @@ function readMore(event) {
 	event.preventDefault();
     var readmoreContext = _walkUpToReadmoreContext(event.target);
     if (!readmoreContext) {
-    	console.log('readmore class used without an enclosing readmore-context')
+    	console.log('Error: readmore class used without an enclosing readmore-context')
     	return;
     }
     //Change visibility of all descendants with class .readmore
@@ -45,6 +66,7 @@ function readMore(event) {
     }
 }
 
+//Check parent elements until we find one with class readmore-context
 function _walkUpToReadmoreContext(element) {
 	var readmoreContext = element;
     while (readmoreContext && !readmoreContext.classList.contains('readmore-context'))  {
@@ -53,13 +75,12 @@ function _walkUpToReadmoreContext(element) {
     return readmoreContext;
 }
 
-
 //readless event handler
 function readLess(event) {
 	event.preventDefault();
     var readmoreContext = _walkUpToReadmoreContext(event.target);
     if (!readmoreContext) {
-    	console.log('readless class used without an enclosing readmore-context')
+    	console.log('Error: readless class used without an enclosing readmore-context')
     	return;
     }
     //Change visibility of all descendants with class .readmore
