@@ -22,16 +22,17 @@ DONE>Bigger github links
 
 -->Copy "Viking Detective" to public site
 
+-->MAKE READMORE REPO AND MAKE IT READY FOR OTHERS TO USE
+
+DONE>Test readmore wih NORMAL links inside a readmore paragraph!!!!
+
 -->INDEX PAGE:Convert to bootstrap(?) columns, for wide screens only
 DONE>lose "core docs"?... comment out?
 
 -->Make visual "blocks" for bootstrap cells on homepage
+-->HTML5 header and footer
 
 -->Bounce http to https (Otherwise Chrome poops on me.)
--->Move rpgworldbuilder to /rpgwb/ in nginx
--->Make a "static" section on fritzpassow.com EC2/nginx
--->Move Github site content to there
-
 
 
 -->Make webpack copy def.json into server/public
