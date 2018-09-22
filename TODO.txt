@@ -15,34 +15,34 @@ DONE>Match background on rpgwb index to rpgwb
 DONE>Better icon for delete array item
 DONE>Better icon for add array item 
 DONE>Image for "Try it!" link
-
 DONE>Nicer display of campaign owners (just as sub-headings?)
-
 DONE>Bigger github links
+DONE>lose "core docs"?... comment out?
+DONE>Test readmore wih NORMAL links inside a readmore paragraph!!!!
+DONE>INDEX PAGE:Convert to bootstrap(?) columns, for wide screens only
+
 
 -->Copy "Viking Detective" to public site
 
--->MAKE READMORE REPO AND MAKE IT READY FOR OTHERS TO USE
 
-DONE>Test readmore wih NORMAL links inside a readmore paragraph!!!!
 
--->INDEX PAGE:Convert to bootstrap(?) columns, for wide screens only
-DONE>lose "core docs"?... comment out?
+
 
 -->Make visual "blocks" for bootstrap cells on homepage
 -->HTML5 header and footer
 
--->Bounce http to https (Otherwise Chrome poops on me.)
+-->Alt text on Try It image.
 
 
 -->Make webpack copy def.json into server/public
 
--->Let's Encrypt auto-renew
 
+==============backlog=====================
+
+-->Let's Encrypt auto-renew
 -->How to restart everything in the right order when the EC2 reboots
 -->Point at the EC2's domain, not IP. Because the IP changes if I stop and start it.
 
-==============backlog=====================
 
 -->Edit an array item (maybe just delete and prepop text in the "add" field?)
 -->Admin
