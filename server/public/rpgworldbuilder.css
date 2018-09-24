@@ -2,12 +2,13 @@ body {
     background: #111;
     color: #ddd;
 }
-.aboutlink {
+.aboutlinkdiv {
     margin:0px;
     padding:0px;
+    padding-right: 10px;
     text-align: right;
 }
-.aboutlink a {
+.aboutlinkdiv a {
     color: white;
 }
 .app {
