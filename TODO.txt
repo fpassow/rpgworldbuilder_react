@@ -20,24 +20,22 @@ DONE>Bigger github links
 DONE>lose "core docs"?... comment out?
 DONE>Test readmore wih NORMAL links inside a readmore paragraph!!!!
 DONE>INDEX PAGE:Convert to bootstrap(?) columns, for wide screens only
+DONE>Make visual "blocks" for bootstrap cells on homepage
+DONE>HTML5 header and footer
+DONE>Alt text on Try It image.
 
 
 -->Copy "Viking Detective" to public site
-
-
-
-
-
--->Make visual "blocks" for bootstrap cells on homepage
--->HTML5 header and footer
-
--->Alt text on Try It image.
 
 
 -->Make webpack copy def.json into server/public
 
 
 ==============backlog=====================
+
+-->Make a separate repo for fritzpassow.com static content
+-->Serve fritzpassow.com static content directly from nginx
+-->Move rpgwb node server to /rpgwb/ in nginx
 
 -->Let's Encrypt auto-renew
 -->How to restart everything in the right order when the EC2 reboots
