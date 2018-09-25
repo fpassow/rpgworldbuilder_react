@@ -14,7 +14,7 @@
         {
             "name": "world",
             "label": "World",
-            "instructions": "Write a bit about the world, the situation, and the part of it all that you personally love and really, really want to GM.",
+            "instructions": "Write about the world, the situation, and the parts that you personally love and really, really want to GM.",
             "longtext": true,
             "isarrayfield": false,
             "hints": []            

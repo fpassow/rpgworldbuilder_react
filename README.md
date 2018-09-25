@@ -30,7 +30,7 @@ Dev Setup:
 1. Install mongodb
 2. Create "rpgworldbuilder" database
 3. npm install
-4. npm run build
+4. npm run build (Tested in gitbash on Windows)
 5. Start you mongodb server
 6. Create a database, mine is called rpgworldbuilder
 7. Store a database url in an environment variable called RPGWORLDBUILDER_DB.
