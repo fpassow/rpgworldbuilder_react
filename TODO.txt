@@ -1,41 +1,23 @@
-September 21
+Oct 2
 ===========
 
-DONE>Add an "about" link from rpgworldbuilder.html back to rpgwbindex.html
+-->Make a separate repo for fritzpassow.com static content
+-->Copy files to static content repo
 
-DONE>Add more info about what's in def.json to rpgwbindex.html (What's a driver, etc)
-DONE>Make useful home page look OK without a big image to scroll past (bootstrap??)
-DONE>Add links to good/cannonical docs to index.html
-DONE>Change print view to display the human-friendly names
-DONE>My array items run togther in the editor
-DONE>My array items run togther in the editor (edited array AND not)
-DONE>Array items run together in static display
-DONE>Same background thing on static fields, non-array
-DONE>Match background on rpgwb index to rpgwb
-DONE>Better icon for delete array item
-DONE>Better icon for add array item 
-DONE>Image for "Try it!" link
-DONE>Nicer display of campaign owners (just as sub-headings?)
-DONE>Bigger github links
-DONE>lose "core docs"?... comment out?
-DONE>Test readmore wih NORMAL links inside a readmore paragraph!!!!
-DONE>INDEX PAGE:Convert to bootstrap(?) columns, for wide screens only
-DONE>Make visual "blocks" for bootstrap cells on homepage
-DONE>HTML5 header and footer
-DONE>Alt text on Try It image.
+-->Chose place for static content
+-->Make an upload script to put it there
+
+-->Move rpgwb node server to /rpgwb/ in nginx
+
+-->Serve fritzpassow.com static content directly from nginx at /
+
 
 
 -->Copy "Viking Detective" to public site
 
 
--->Make webpack copy def.json into server/public
-
-
 ==============backlog=====================
 
--->Make a separate repo for fritzpassow.com static content
--->Serve fritzpassow.com static content directly from nginx
--->Move rpgwb node server to /rpgwb/ in nginx
 
 -->Let's Encrypt auto-renew
 -->How to restart everything in the right order when the EC2 reboots
