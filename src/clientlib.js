@@ -56,7 +56,7 @@ class ClientLib {
         let postBody = {};
         postBody.username = username;
         postBody.password = password;
-        return this.restRequest('post', '/api/v01/users', false, postBody);
+        return this.restRequest('post', 'api/v01/users', false, postBody);
     }
 
     /* 
@@ -67,7 +67,7 @@ class ClientLib {
      */
     checkUser(username, password) {
         let auth = {username:username, password:password};
-        return this.restRequest('get', '/api/v01/checkauth', auth);
+        return this.restRequest('get', 'api/v01/checkauth', auth);
     } 
 
     /*
@@ -76,7 +76,7 @@ class ClientLib {
     changePassword(username, oldPassword, newPassword) {
      	let auth = {username:username, password:oldPassword};
         let body = {username:username, password:newPassword};
-        return this.restRequest('put', '/api/v01/users', auth, body);
+        return this.restRequest('put', 'api/v01/users', auth, body);
     }
 
     /*
@@ -85,14 +85,14 @@ class ClientLib {
      */
     deleteUser(username, password) {
         let auth = {username:username, password};
-        return this.restRequest('delete', '/api/v01/users', auth);
+        return this.restRequest('delete', 'api/v01/users', auth);
     }
 
     /*
      * Returns a promise which fulfills with an array of username's.
      */
     listUsers() {
-        return this.restRequest('get', '/api/v01/users');
+        return this.restRequest('get', 'api/v01/users');
     }
 
     /*
@@ -100,7 +100,7 @@ class ClientLib {
      * Returns a promise which fulfills with an array of campaign objects.
      */
     listUserCampaigns(username) {
-        return this.restRequest('get', '/api/v01/users/' + username + '/campaigns');
+        return this.restRequest('get', 'api/v01/users/' + username + '/campaigns');
     }
 
     /*
@@ -110,7 +110,7 @@ class ClientLib {
      */
     createCampaign(username, password, campaign) {
         let auth = {username:username, password:password};
-        return this.restRequest('post','/api/v01/campaigns', auth, campaign);
+        return this.restRequest('post','api/v01/campaigns', auth, campaign);
     }
 
     /*
@@ -120,7 +120,7 @@ class ClientLib {
      */
     updateCampaign(campaign, password) {
         let auth = {username:campaign.username, password:password};
-        return this.restRequest('put','/api/v01/campaigns', auth, campaign);
+        return this.restRequest('put','api/v01/campaigns', auth, campaign);
     }
 
     /*
@@ -128,14 +128,14 @@ class ClientLib {
      * of {campaignId:..., title:...} objects.
      */
     listCampaigns() {
-        return this.restRequest('get','/api/v01/campaigns');
+        return this.restRequest('get','api/v01/campaigns');
     }
 
     /*
      * Returns a promise which fulfills with the campaign object
      */
     loadCampaign(campaignId) {
-        return this.restRequest('get','/api/v01/campaigns/' + campaignId);
+        return this.restRequest('get','api/v01/campaigns/' + campaignId);
     }
 
     /*
@@ -144,7 +144,7 @@ class ClientLib {
      */
     deleteCampaign(username, password, campaignId) {
         let auth = {username:username, password:password};
-        return this.restRequest('delete','/api/v01/campaigns/' + campaignId, auth);
+        return this.restRequest('delete','api/v01/campaigns/' + campaignId, auth);
     }
 
 }

@@ -1,15 +1,38 @@
 Oct 2
 ===========
 
--->Make a separate repo for fritzpassow.com static content
--->Copy files to static content repo
+DONE>Make a separate repo for fritzpassow.com static content
+DONE>Copy files to static content repo
 
--->Chose place for static content
--->Make an upload script to put it there
+-->Make sure I've recorded username is "ubuntu"
 
--->Move rpgwb node server to /rpgwb/ in nginx
+DONE>Confirm what EC2's are running
+DONE>Confirm what security thingies are used
+-->Move old keys in \AWS into an archive dir
+-->Condense notes in \AWS folders
+-->Clean old \AWS folders
+
+DONE>Restart EC2  
+DONE>Restart mongo (check if it's running, first)
+DONE>Restart node  (check if it's running, first)
+DONE>Restart nginx (check if it's running, first)
+
+DONE>Chose place for static content: ~/fritzpassow.com
+
+DONE>Make an upload script to put it there
+DONE>Test upload script
+
+DONE>Find the nginx config
+DONE>Check clientlib.js to see if adding to path will break things (Yes!)
+-->In clientlib.js make paths relative
+
+-->Move rpgwb node server to /rpgwb/ in nginx config
+-->Test that I reach it at that path
+-->And not old one
 
 -->Serve fritzpassow.com static content directly from nginx at /
+
+-->Test everything
 
 
 
@@ -17,6 +40,9 @@ Oct 2
 
 
 ==============backlog=====================
+
+-->I broke ability to bookmark campaigns when I made clientlib.js urls relative...
+  -->Removed it for now....
 
 
 -->Let's Encrypt auto-renew
