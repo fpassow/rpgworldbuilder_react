@@ -24,13 +24,17 @@ DONE>Test upload script
 
 DONE>Find the nginx config
 DONE>Check clientlib.js to see if adding to path will break things (Yes!)
--->In clientlib.js make paths relative
+DONE>In clientlib.js make paths relative
+
+
+-->Serve fritzpassow.com static content directly from nginx at /
 
 -->Move rpgwb node server to /rpgwb/ in nginx config
 -->Test that I reach it at that path
 -->And not old one
+-->Update URL in fritzpassow.com home page
 
--->Serve fritzpassow.com static content directly from nginx at /
+
 
 -->Test everything
 

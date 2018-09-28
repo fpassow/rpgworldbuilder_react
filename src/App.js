@@ -183,7 +183,7 @@ function Controller(comp) {
   };
 
   function updateUrl(campaign) {
-  	//window.history.pushState({}, campaign.title, '/rpgwb/route/'+campaign.campaignId);
+  	window.history.pushState({}, campaign.title, '/route/'+campaign.campaignId);
   }
 
   this.editCampaign = ()=>{
