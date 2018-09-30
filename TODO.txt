@@ -34,8 +34,16 @@ DONE>Test that I reach it at that path
 DONE>Update URL in fritzpassow.com home page
 
 
-
 -->Test everything
+DONE>Printable view url not relative
+
+
+-->Fully mirror with nginx on laptop
+-->Add configs to fritzpassow.com repo
+
+
+
+-->/location/ isn't understood by nginx !!!!
 
 
 

@@ -586,7 +586,7 @@ function CampaignControls(props) {
             disabled={!isMyCampaign(model)} 
             onClick={controller.deleteCampaign}>Delete</button>
             &nbsp;&nbsp;
-    {!!model.campaign && (<a target="_blank" href={'/api/v01/campaignpage/'+model.campaign.campaignId}>printable view</a>)}
+    {!!model.campaign && (<a target="_blank" href={'api/v01/campaignpage/'+model.campaign.campaignId}>printable view</a>)}
   </div>
 }
 
