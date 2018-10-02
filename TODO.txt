@@ -2,7 +2,8 @@ TODO
 ===========
 
 DONE>Leave edit-mode when I change campaigns
--->  And stop edits from following me to other campaigns!!!!
+DONE>  And stop edits from following me to other campaigns!!!!
+
 
 -->Edit array items!!!!! (I want this!!!)
 
