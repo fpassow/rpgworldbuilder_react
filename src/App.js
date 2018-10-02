@@ -174,10 +174,13 @@ function Controller(comp) {
   //
   //}
   this.selectCampaign = (campMeta)=>{
+  	if (comp.state.editMode && !confirm('Discard changes?')) {
+  		return;
+  	}
     clientlib.loadCampaign(campMeta.campaignId).then((camp)=>{
     	if (camp) {
     		updateUrl(camp);
-            comp.setState({campaign:camp});
+            comp.setState({campaign:camp, editMode:false});
         }
     });
   };

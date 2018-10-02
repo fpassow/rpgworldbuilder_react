@@ -1,7 +1,10 @@
 TODO
 ===========
 
--->Edit array items!!!!! (I want this!!1)
+DONE>Leave edit-mode when I change campaigns
+-->  And stop edits from following me to other campaigns!!!!
+
+-->Edit array items!!!!! (I want this!!!)
 
 -->Fully mirror with nginx on laptop
 -->Add configs to fritzpassow.com repo
