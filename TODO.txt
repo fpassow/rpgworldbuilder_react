@@ -1,59 +1,17 @@
-Oct 2
+TODO
 ===========
 
-DONE>Make a separate repo for fritzpassow.com static content
-DONE>Copy files to static content repo
-
--->Make sure I've recorded username is "ubuntu"
-
-DONE>Confirm what EC2's are running
-DONE>Confirm what security thingies are used
--->Move old keys in \AWS into an archive dir
--->Condense notes in \AWS folders
--->Clean old \AWS folders
-
-DONE>Restart EC2  
-DONE>Restart mongo (check if it's running, first)
-DONE>Restart node  (check if it's running, first)
-DONE>Restart nginx (check if it's running, first)
-
-DONE>Chose place for static content: ~/fritzpassow.com
-
-DONE>Make an upload script to put it there
-DONE>Test upload script
-
-DONE>Find the nginx config
-DONE>Check clientlib.js to see if adding to path will break things (Yes!)
-DONE>In clientlib.js make paths relative
-
-
-DONE>Serve fritzpassow.com static content directly from nginx at /
-
-DONE>Move rpgwb node server to /rpgwb/ in nginx config
-DONE>Test that I reach it at that path
-DONE>Update URL in fritzpassow.com home page
-
-
--->Test everything
-DONE>Printable view url not relative
-
+-->Edit array items!!!!! (I want this!!1)
 
 -->Fully mirror with nginx on laptop
 -->Add configs to fritzpassow.com repo
 
 
-
--->/location/ isn't understood by nginx !!!!
-
-
+-->Tune tab behavior
+-->A11y
 
 -->Copy "Viking Detective" to public site
 
-
-==============backlog=====================
-
--->I broke ability to bookmark campaigns when I made clientlib.js urls relative...
-  -->Removed it for now....
 
 
 -->Let's Encrypt auto-renew
