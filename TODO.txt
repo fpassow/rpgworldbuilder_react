@@ -1,11 +1,38 @@
 TODO
 ===========
 
-DONE>Leave edit-mode when I change campaigns
-DONE>  And stop edits from following me to other campaigns!!!!
-
 
 -->Edit array items!!!!! (I want this!!!)
+
+A button adds an array element containing ""
+Buttons delete existing elemements
+
+OR....
+Button adds a new editable element
+All elements are editable
+all elements have delete buttons
+current "changed" plan: Single text input has "keypress" and "changed" events.
+   "changed" updates the model
+   "keypress" checks for return, and has similar action
+
+NEW EVENTS PLAN
+  Make text inputs for every element
+  We can get the value from e
+  store index on data-rpgwb-index
+  get with e.target.dataSet['rpgwbIndex']
+
+
+==>>>>>THEY ARE NOT INPUTS!!!!!
+
+==>>Last input line missing its delete x
+
+
+
+
+
+--?
+
+
 
 -->Fully mirror with nginx on laptop
 -->Add configs to fritzpassow.com repo

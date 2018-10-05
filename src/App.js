@@ -33,7 +33,6 @@ let model_0 = {
   campaignList: [],
   campaign: null,
   editMode: false,
-  editingField: null,
   creatingAccount: false,
   changingPassword: false,
   anonymousEditing: false
@@ -255,18 +254,22 @@ function Controller(comp) {
   };
 
   this.arrayFieldChanged = (e)=>{
-    //We only edit the last array element of an array field...
     let fieldName = e.target.name;
     let fieldValue = e.target.value;
+    let fieldIndex = e.target.dataset.rpwbIndex;
     let campy = comp.state.campaign;
-    let arr = campy[fieldName];
-    arr[arr.length - 1] = fieldValue;
+    let arr = campy[fieldName].slice();
+    arr[fieldIndex] = fieldValue;
     let mergeMe = {};
     mergeMe.campaign = campy;
+    mergeMe.campaign[fieldName] = arr;
     comp.setState(mergeMe);
   };
 
   this.arrayFieldKeyPress = (e)=>{
+  	return;
+    //this.arrayFieldChanged(e);
+  	/*
     //Add a new last element to an array field when user presses "Enter"
     //  in the INPUT for that array field.
     if (e.key !== 'Enter') return;
@@ -283,6 +286,7 @@ function Controller(comp) {
     mergeMe.campaign = campy;
     mergeMe.editingField = fieldName;
     comp.setState(mergeMe);
+    */
   };
 
   this.arrayFieldAdd = (e)=>{
@@ -290,14 +294,7 @@ function Controller(comp) {
     //and record that we are editing that fieldname.
     let fieldName = e.target.name;
     let campy = comp.state.campaign;
-    let editingField = comp.state.editingField;
 
-    //Trim an empty element (if any) from the current editingName field
-    if ((comp.state.editingField !== null) &&
-        (campy[editingField].length > 0) && 
-        (campy[editingField][campy[editingField].length - 1].trim().length === 0)) {
-      campy[editingField].pop();
-    }
     //Add an empty element to the new editingField
     if (!campy[fieldName]) campy[fieldName] = [];
     campy[fieldName].push('');
@@ -741,62 +738,35 @@ function ArrayEditableField(props) {
   let fieldData = props.fieldData || [];
   let model = props.model;
   let controller = props.controller;
-
-  //model.editingField holds the name of the array field (if any) which we are
-  //  currently editing... the one who gets a text area as the last element.
-  if (fieldDef.name === model.editingField) {
-    let arr = fieldData.slice();
-    let lastData = arr.pop();
-    return <div className="editablefield">
-      <h3>{fieldDef.label}</h3>
-      <div className="fieldInstructions">{fieldDef.instructions}</div>
-      <div className="hints">
-        {fieldDef.hints.map((hint)=>{
-          return <CollapsingHint label={hint.label} description={hint.description} />
-        })}
-      </div>
-      <ul>
-      {arr.map((arrayElement, index)=>{
-        return (
-        	<li key={arrayElement} className="campaign-arrayfield-item">
-        	  {arrayElement}  
-        	  <button type="button" className="campaign-arrayfield-item-delete" onClick={()=>{controller.arrayFieldDelete(fieldDef.name,index);}}>X</button>
-        	</li>
-        )
+  return (<div className="editablefield">
+    <h3>{fieldDef.label}</h3>
+    <div className="fieldInstructions">{fieldDef.instructions}</div>
+    <div className="hints">
+      {fieldDef.hints.map((hint)=>{
+        return <CollapsingHint label={hint.label} description={hint.description} />
       })}
-
-      <li key="editing">
-        <input name={fieldDef.name} 
-               value={lastData} 
-               onKeyPress={controller.arrayFieldKeyPress}
-               onChange={controller.arrayFieldChanged} />
-        <button className="campaign-arrayfield-addbutton" type="button" name={fieldDef.name} onClick={controller.arrayFieldAdd}> + </button>
-      </li>
-      </ul>
     </div>
-  
-  } else {
-    return <div className="editablefield">
-      <h3>{fieldDef.label}</h3>
-      <div className="fieldInstructions">{fieldDef.instructions}</div>
-      <div className="hints">
-        {fieldDef.hints.map((hint)=>{
-          return <CollapsingHint label={hint.label} description={hint.description} />
-        })}
-      </div>
-      <ul>
+    <ul>
       {fieldData.map((arrayElement,index)=>{
         return (
-        	<li className="campaign-arrayfield-item" key={arrayElement}>{arrayElement}  
-        	<button className="campaign-arrayfield-item-delete" onClick={()=>{controller.arrayFieldDelete(fieldDef.name,index);}}>X</button></li>
+    	  <li key={arrayElement+index}>
+    	    <input type="text" 
+    	           className="campaign-arrayfield-item" 
+    	           data-rpgwb-index={index}
+                   name={fieldDef.name} 
+                   value={arrayElement} 
+                   onKeyPress={controller.arrayFieldKeyPress}
+                   onChange={controller.arrayFieldChanged}
+    	    />
+    	    <button className="campaign-arrayfield-item-delete" onClick={()=>{controller.arrayFieldDelete(fieldDef.name,index);}}>X</button>
+    	  </li>
         )
       })}
       <li key="button">
         <button className="campaign-arrayfield-addbutton" type="button" name={fieldDef.name} onClick={controller.arrayFieldAdd}>+</button>
       </li>
-      </ul>
-    </div>;
-  }
+    </ul>
+  </div>);
 }
 
 //takes props: label, description
