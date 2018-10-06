@@ -2,37 +2,15 @@ TODO
 ===========
 
 
--->Edit array items!!!!! (I want this!!!)
+DONE>Edit array items!!!!! (I want this!!!)
 
-A button adds an array element containing ""
-Buttons delete existing elemements
+DONE>Fit del button on the same line
 
-OR....
-Button adds a new editable element
-All elements are editable
-all elements have delete buttons
-current "changed" plan: Single text input has "keypress" and "changed" events.
-   "changed" updates the model
-   "keypress" checks for return, and has similar action
+DONE>Focus goes away from array field!!!
 
-NEW EVENTS PLAN
-  Make text inputs for every element
-  We can get the value from e
-  store index on data-rpgwb-index
-  get with e.target.dataSet['rpgwbIndex']
+-->Edit button shows as active when I'm already editing. (Logged in or not)
 
-
-==>>>>>THEY ARE NOT INPUTS!!!!!
-
-==>>Last input line missing its delete x
-
-
-
-
-
---?
-
-
+-->Make array items responsive
 
 -->Fully mirror with nginx on laptop
 -->Add configs to fritzpassow.com repo

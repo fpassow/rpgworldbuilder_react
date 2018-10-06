@@ -112,11 +112,6 @@ h4 {
 .campaign-author-credit {
 }
 
-
-input {
-}
-textarea {
-}
 #hintbox {
     border:4px solid #bbf;
     background:white;
@@ -218,9 +213,9 @@ div.campaign-arrayfield p {
     font-size:18px;
 }
 .campaign-arrayfield-item-delete {
-    text-align: right;
+    
     display:inline-block;
-    float:right;
+    
 }
 .hintlink {
 }
@@ -229,9 +224,14 @@ div.campaign-arrayfield p {
 .rwb-field-docblock-hints {
     margin-left: 20px;
 }
+
 input {
     width: 100%;
 }
+.campaign-arrayfield-item {
+    width: 800px;
+}
+
 textarea {
     width: 100%;
 }

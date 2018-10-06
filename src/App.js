@@ -256,7 +256,8 @@ function Controller(comp) {
   this.arrayFieldChanged = (e)=>{
     let fieldName = e.target.name;
     let fieldValue = e.target.value;
-    let fieldIndex = e.target.dataset.rpwbIndex;
+    let fieldIndex = e.target.dataset.rpgwbIndex;
+    console.log('CHNGED name:'+fieldName+' value:'+fieldValue+' index:'+fieldIndex);
     let campy = comp.state.campaign;
     let arr = campy[fieldName].slice();
     arr[fieldIndex] = fieldValue;
@@ -266,8 +267,8 @@ function Controller(comp) {
     comp.setState(mergeMe);
   };
 
-  this.arrayFieldKeyPress = (e)=>{
-  	return;
+ // this.arrayFieldKeyPress = (e)=>{
+ // 	return;
     //this.arrayFieldChanged(e);
   	/*
     //Add a new last element to an array field when user presses "Enter"
@@ -287,7 +288,7 @@ function Controller(comp) {
     mergeMe.editingField = fieldName;
     comp.setState(mergeMe);
     */
-  };
+ // };
 
   this.arrayFieldAdd = (e)=>{
     //Add a new last element to edit with a text input
@@ -749,16 +750,15 @@ function ArrayEditableField(props) {
     <ul>
       {fieldData.map((arrayElement,index)=>{
         return (
-    	  <li key={arrayElement+index}>
+    	  <li key={fieldDef.name+index}>
     	    <input type="text" 
     	           className="campaign-arrayfield-item" 
     	           data-rpgwb-index={index}
                    name={fieldDef.name} 
                    value={arrayElement} 
-                   onKeyPress={controller.arrayFieldKeyPress}
                    onChange={controller.arrayFieldChanged}
     	    />
-    	    <button className="campaign-arrayfield-item-delete" onClick={()=>{controller.arrayFieldDelete(fieldDef.name,index);}}>X</button>
+    	    <button data-rpgwb-index={index} className="campaign-arrayfield-item-delete" onClick={()=>{controller.arrayFieldDelete(fieldDef.name,index);}}>X</button>
     	  </li>
         )
       })}
@@ -768,6 +768,8 @@ function ArrayEditableField(props) {
     </ul>
   </div>);
 }
+//onKeyPress={controller.arrayFieldKeyPress}
+
 
 //takes props: label, description
 class CollapsingHint extends Component {
