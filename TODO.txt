@@ -8,7 +8,11 @@ DONE>Fit del button on the same line
 
 DONE>Focus goes away from array field!!!
 
--->Edit button shows as active when I'm already editing. (Logged in or not)
+DONE>Edit button shows as active when I'm already editing. (Logged in or not)
+
+DONE>Edit button shows active when I'm not even logged in.
+
+-->Start updating url again
 
 -->Make array items responsive
 

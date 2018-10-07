@@ -267,29 +267,6 @@ function Controller(comp) {
     comp.setState(mergeMe);
   };
 
- // this.arrayFieldKeyPress = (e)=>{
- // 	return;
-    //this.arrayFieldChanged(e);
-  	/*
-    //Add a new last element to an array field when user presses "Enter"
-    //  in the INPUT for that array field.
-    if (e.key !== 'Enter') return;
-    e.preventDefault();
-    let fieldName = e.target.name;
-    let campy = comp.state.campaign;
-
-    //If the INPUT is empty, don't add a new empty element.
-    if (campy[fieldName][campy[fieldName].length - 1].trim().length === 0) return;
-
-    //Add an empty element, "saving" the previously edited one
-    campy[fieldName].push('');
-    let mergeMe = {};
-    mergeMe.campaign = campy;
-    mergeMe.editingField = fieldName;
-    comp.setState(mergeMe);
-    */
- // };
-
   this.arrayFieldAdd = (e)=>{
     //Add a new last element to edit with a text input
     //and record that we are editing that fieldname.
@@ -571,9 +548,10 @@ function Campaign(props) {
 function CampaignControls(props) {
   let model = props.model;
   let controller = props.controller;
+  console.log('Edit disabled:'+ (!isMyCampaign(model) || model.editMode));
   return <div id="campaignViewerControls">
     <button type="button"
-            disabled={!isMyCampaign(model)} 
+            disabled={!isMyCampaign(model) || model.editMode} 
             onClick={controller.editCampaign}>Edit</button>
     <button type="button" 
             disabled={!isMyCampaign(model)} 
@@ -768,8 +746,6 @@ function ArrayEditableField(props) {
     </ul>
   </div>);
 }
-//onKeyPress={controller.arrayFieldKeyPress}
-
 
 //takes props: label, description
 class CollapsingHint extends Component {
