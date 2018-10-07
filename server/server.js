@@ -343,7 +343,7 @@ function serveSomeWebs(store) {
     //Serve the index page when someone makes a new request for an URL 
     //  with a campaignId in it.
     //Client-side code will look at the URL and actually select and load the campaign.
-    app.get('/route/:campaignId',(req, res)=>{
+    app.get('/rpgworldbuilder',(req, res)=>{
         res.sendFile(__dirname + '/public/rpgworldbuilder.html');
     });
 

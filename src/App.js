@@ -185,7 +185,7 @@ function Controller(comp) {
   };
 
   function updateUrl(campaign) {
-  	//window.history.pushState({}, campaign.title, '/route/'+campaign.campaignId);
+  	window.history.pushState({}, campaign.title, '/rpgworldbuilder?campaign='+campaign.campaignId);
   }
 
   this.editCampaign = ()=>{
@@ -335,12 +335,10 @@ class App extends Component {
   }
   //Select a campaign if it was part of the URL that brought the user here.
   selectCampaignFromCurrentUrl() {
-  	let path = window.location.pathname;
-  	if (path &&  path.startsWith('/route/')) {
-  		let campaignId = path.substring(7);
-  		if (campaignId)  {
-  			this.controller.selectCampaign({campaignId:campaignId});
-  		}
+  	let search = window.location.search;
+  	if (search && (search.length > '?campaign='.length) && search.startsWith('?campaign=')) { 
+  	  let campaignId = search.substring('?campaign='.length);
+  	  this.controller.selectCampaign({campaignId:campaignId});
   	}
   }
 }
@@ -548,7 +546,6 @@ function Campaign(props) {
 function CampaignControls(props) {
   let model = props.model;
   let controller = props.controller;
-  console.log('Edit disabled:'+ (!isMyCampaign(model) || model.editMode));
   return <div id="campaignViewerControls">
     <button type="button"
             disabled={!isMyCampaign(model) || model.editMode} 
