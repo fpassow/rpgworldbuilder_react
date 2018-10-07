@@ -185,7 +185,7 @@ function Controller(comp) {
   };
 
   function updateUrl(campaign) {
-  	window.history.pushState({}, campaign.title, '/rpgworldbuilder?campaign='+campaign.campaignId);
+  	window.history.pushState({}, campaign.title, window.location.pathname+'?campaign='+campaign.campaignId);
   }
 
   this.editCampaign = ()=>{
