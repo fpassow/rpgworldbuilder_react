@@ -29,4 +29,13 @@ DONE>  And stop edits from following me to other campaigns!!!!
 -->Display user's driver entries under the individual drivers, not all at the end.
 
 
+ An epic is
+"epic" because it deals explicitly with the largest and most important
+questions of humankind: what is the meaning of life? why are we
+here? who is God and what is She doing? what is the religious and/or
+moral order of the universe? In fact, back in the days when epics
+were more commonly written, their acknowledged purpose was to
+tackle such questions.
+
+http://www.stephenrdonaldson.com/EpicFantasy.pdf
 
