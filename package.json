@@ -13,7 +13,7 @@
     "basic-auth": "^1.1.0",
     "body-parser": "^1.17.1",
     "cors": "^2.8.4",
-    "express": "^4.15.2",
+    "express": "^4.17.3",
     "mongodb": "^2.2.26",
     "morgan": "^1.9.1",
     "react": "^16.2.0",
